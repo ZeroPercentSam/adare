@@ -1,0 +1,229 @@
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 50vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+}
+
+.heroBackground {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.heroImage {
+    object-fit: cover;
+}
+
+.heroOverlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.heroContent {
+    position: relative;
+    z-index: 2;
+    color: var(--color-primary-inverse);
+    padding: var(--spacing-4);
+}
+
+.heroContent h1 {
+    color: var(--color-primary-inverse);
+    font-size: clamp(40px, 5vw, 64px);
+    margin-bottom: var(--spacing-2);
+    animation: fadeUp 0.6s var(--transition-slow) forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.heroContent p {
+    font-family: var(--font-serif);
+    font-size: clamp(20px, 2.5vw, 24px);
+    color: var(--color-accent-warm);
+    letter-spacing: 0.05em;
+    animation: fadeUp 0.6s var(--transition-slow) 0.1s forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Story Section */
+.storySection {
+    padding: var(--spacing-24) 0;
+    background-color: var(--color-background);
+}
+
+.storyGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-16);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+    .storyGrid {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+}
+
+.storyText h2 {
+    font-size: clamp(32px, 4vw, 48px);
+    margin-bottom: var(--spacing-8);
+}
+
+.storyText p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--color-muted-text);
+    margin-bottom: var(--spacing-6);
+}
+
+.signature {
+    margin-top: var(--spacing-8);
+    opacity: 0.7;
+}
+
+.storyImageWrapper {
+    position: relative;
+    height: 600px;
+    width: 100%;
+}
+
+.storyImage {
+    object-fit: cover;
+}
+
+/* Pillars Section */
+.pillarsSection {
+    padding: var(--spacing-24) 0;
+    background-color: #FAFAFA;
+}
+
+.pillarsGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-8);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .pillarsGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.pillar {
+    padding: var(--spacing-8);
+    border-top: 2px solid var(--color-accent-warm);
+    background-color: var(--color-background);
+}
+
+.pillarNumber {
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-muted-text);
+    margin-bottom: var(--spacing-6);
+    letter-spacing: 0.1em;
+}
+
+.pillar h3 {
+    font-size: 24px;
+    margin-bottom: var(--spacing-4);
+}
+
+.pillar p {
+    color: var(--color-muted-text);
+    line-height: 1.6;
+}
+
+/* Team Section */
+.teamSection {
+    padding: var(--spacing-24) 0;
+    background-color: var(--color-background);
+}
+
+.teamGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-12);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .teamGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.providerCard {
+    display: flex;
+    flex-direction: column;
+}
+
+.providerImageWrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    margin-bottom: var(--spacing-6);
+    overflow: hidden;
+}
+
+.providerImage {
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: filter var(--transition-slow), transform var(--transition-slow);
+}
+
+.providerCard:hover .providerImage {
+    filter: grayscale(0%);
+    transform: scale(1.02);
+}
+
+.providerInfo h3 {
+    font-size: 24px;
+    margin-bottom: var(--spacing-2);
+}
+
+.providerRole {
+    font-family: var(--font-sans);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-accent-warm);
+    margin-bottom: var(--spacing-4);
+    font-weight: 600;
+}
+
+.providerBio {
+    color: var(--color-muted-text);
+    line-height: 1.6;
+}
+
+/* Membership CTA Section */
+.membershipSection {
+    padding: var(--spacing-24) 0;
+    background-color: var(--color-primary);
+    color: var(--color-primary-inverse);
+}
+
+.membershipTitle {
+    color: var(--color-primary-inverse);
+    margin-bottom: var(--spacing-8);
+}

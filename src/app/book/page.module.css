@@ -1,0 +1,167 @@
+.container {
+    padding-top: var(--nav-height);
+    min-height: 100vh;
+    background-color: var(--color-background);
+}
+
+.heroSection {
+    background-color: var(--color-surface);
+    padding: var(--spacing-20) 0 var(--spacing-16);
+    border-bottom: 1px solid var(--color-border);
+    text-align: center;
+}
+
+.title {
+    font-family: var(--font-heading);
+    font-size: var(--text-4xl);
+    font-weight: 300;
+    margin-bottom: var(--spacing-6);
+    line-height: 1.1;
+    color: var(--color-text-primary);
+}
+
+.subtitle {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: var(--text-lg);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+.formSection {
+    padding: var(--spacing-16) 0;
+}
+
+.formCard {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    padding: var(--spacing-10);
+}
+
+.loading {
+    text-align: center;
+    padding: var(--spacing-10);
+    color: var(--color-text-secondary);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-6);
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+}
+
+.formRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-6);
+}
+
+.label {
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.input,
+.select,
+.textarea {
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
+    padding: var(--spacing-3) var(--spacing-4);
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    color: var(--color-text-primary);
+    width: 100%;
+    transition: all 0.2s ease;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+    outline: none;
+    border-color: var(--color-text-primary);
+    box-shadow: 0 0 0 1px var(--color-text-primary);
+}
+
+.select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1em;
+    padding-right: 2.5rem;
+}
+
+.textarea {
+    resize: vertical;
+}
+
+.submitButton {
+    background-color: var(--color-text-primary);
+    color: var(--color-background);
+    border: none;
+    padding: var(--spacing-4) var(--spacing-8);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: var(--spacing-4);
+    width: 100%;
+}
+
+.submitButton:hover {
+    background-color: var(--color-accent-warm);
+    color: var(--color-text-primary);
+}
+
+.successMessage {
+    text-align: center;
+    padding: var(--spacing-10) 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-6);
+}
+
+.successMessage h3 {
+    font-family: var(--font-heading);
+    font-size: var(--text-3xl);
+    font-weight: 300;
+}
+
+.successMessage p {
+    color: var(--color-text-secondary);
+    max-width: 400px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: var(--text-3xl);
+    }
+
+    .formRow {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-5);
+    }
+
+    .formCard {
+        padding: var(--spacing-6);
+        border-left: none;
+        border-right: none;
+    }
+}

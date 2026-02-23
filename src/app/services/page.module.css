@@ -1,0 +1,201 @@
+.container {
+    width: 100%;
+}
+
+/* Hero Grid */
+.heroGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    height: auto;
+}
+
+@media (min-width: 1024px) {
+    .heroGrid {
+        grid-template-columns: repeat(2, 1fr);
+        height: 100vh;
+        min-height: 800px;
+    }
+}
+
+.heroTile {
+    position: relative;
+    height: 50vh;
+    min-height: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--color-primary-inverse);
+}
+
+@media (min-width: 1024px) {
+    .heroTile {
+        height: 100%;
+    }
+}
+
+.tileImage {
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.heroTile:hover .tileImage {
+    transform: scale(1.05);
+}
+
+.tileOverlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: background-color var(--transition-normal);
+    z-index: 1;
+}
+
+.heroTile:hover .tileOverlay {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.tileContent {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: var(--spacing-4);
+    max-width: 600px;
+    transition: transform var(--transition-normal);
+}
+
+.heroTile:hover .tileContent {
+    transform: translateY(-8px);
+}
+
+.tileContent h2 {
+    color: var(--color-primary-inverse);
+    font-size: clamp(32px, 3.5vw, 48px);
+    margin-bottom: var(--spacing-2);
+}
+
+.tileContent p {
+    font-family: var(--font-sans);
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: var(--spacing-6);
+    letter-spacing: 0.05em;
+}
+
+.exploreLink {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-bottom: 1px solid var(--color-primary-inverse);
+    padding-bottom: 2px;
+}
+
+/* Directory Section */
+.directorySection {
+    padding: var(--spacing-24) 0;
+    background-color: var(--color-background);
+}
+
+.directoryHeader {
+    text-align: center;
+    margin-bottom: var(--spacing-16);
+}
+
+.tableWrapper {
+    overflow-x: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.servicesTable {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.servicesTable th {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-muted-text);
+    padding: var(--spacing-4);
+    border-bottom: 1px solid var(--color-divider);
+}
+
+.servicesTable td {
+    padding: var(--spacing-6) var(--spacing-4);
+    border-bottom: 1px solid var(--color-divider);
+    vertical-align: middle;
+}
+
+.serviceName {
+    font-family: var(--font-serif);
+    font-size: 24px;
+    min-width: 200px;
+}
+
+.serviceName a {
+    transition: color var(--transition-fast);
+}
+
+.serviceName a:hover {
+    color: var(--color-muted-text);
+}
+
+.serviceDescription {
+    color: var(--color-muted-text);
+    font-size: 16px;
+    min-width: 300px;
+}
+
+.serviceActions {
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 500;
+    min-width: 200px;
+}
+
+.actionLink {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: color var(--transition-fast);
+}
+
+.actionLink:hover {
+    color: var(--color-muted-text);
+}
+
+.divider {
+    margin: 0 var(--spacing-2);
+    color: var(--color-divider);
+}
+
+.actionLinkBook {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-accent-warm);
+    transition: color var(--transition-fast);
+}
+
+.actionLinkBook:hover {
+    color: var(--color-primary);
+}
+
+/* Membership CTA */
+.membershipSection {
+    background-color: var(--color-primary);
+    color: var(--color-primary-inverse);
+    padding: var(--spacing-24) 0;
+}
+
+.membershipTitle {
+    color: var(--color-primary-inverse);
+    margin-bottom: var(--spacing-8);
+}
