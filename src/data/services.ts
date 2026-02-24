@@ -152,6 +152,7 @@ export const servicesData: ServiceCategory[] = [
                     'The microneedling pass (approximately 20-30 minutes) using a sterile, FDA-cleared device',
                     'Application of calming serums or Exosome complexes, followed by strict post-care instructions'
                 ],
+                imageSrc: '/images/services/microneedling.jpg',
                 resultsAndTiming: 'You will experience an immediate "glow" once the mild redness subsides in a few days. True collagen remodeling occurs beneath the surface and peaks at 4-6 weeks. A series of 3-6 treatments is universally recommended for optimal correction.',
                 pairWith: [
                     { name: 'Facials', slug: 'facials', categorySlug: 'advanced-aesthetics' },
