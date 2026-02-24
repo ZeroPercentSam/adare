@@ -249,6 +249,7 @@ export const servicesData: ServiceCategory[] = [
                     'Detailed lab review and the creation of your personalized Bioidentical Hormone Replacement Therapy (BHRT) protocol',
                     'Continuous monitoring, symptom tracking, and lab re-checks to perfectly dial in your dosage'
                 ],
+                imageSrc: '/images/services/hormone-optimization.jpg',
                 resultsAndTiming: 'Improvements in sleep, mood, and mental clarity often begin within 2 to 4 weeks. Full metabolic optimization, including changes in body composition and sustained energy, typically follows a carefully monitored protocol over 3 to 6 months.',
                 pairWith: [
                     { name: 'Medical Weight Loss', slug: 'medical-weight-loss', categorySlug: 'longevity-metabolic-wellness' },
@@ -277,6 +278,7 @@ export const servicesData: ServiceCategory[] = [
                     'A personalized dosing protocol (usually a weekly subcutaneous injection) designed to minimize side effects',
                     'Monthly check-ins and dosage titrations to ensure continuous progress without plateauing'
                 ],
+                imageSrc: '/images/services/medical-weight-loss.jpg',
                 resultsAndTiming: 'Appetite suppression and the quieting of "food noise" is often felt within the first 24 to 48 hours of your first dose. Steady, sustainable weight loss (aiming for 1-2 lbs per week) occurs consistently over the following months.',
                 pairWith: [
                     { name: 'Emsculpt NEO', slug: 'emsculpt-neo', categorySlug: 'body-contouring' },
@@ -333,6 +335,7 @@ export const servicesData: ServiceCategory[] = [
                     'Administration in our luxury lounge; IV drips take time (2-4 hours) while IM shots take seconds',
                     'Tracking of energy levels, mental clarity, and sleep improvements post-treatment'
                 ],
+                imageSrc: '/images/services/nad-therapy.jpg',
                 resultsAndTiming: 'Patients frequently report a profound, immediate "lifting of the fog" and a surge in clean, jitter-free energy by the end of the infusion. For deep anti-aging or chronic fatigue repair, a loading phase of several infusions is highly recommended.',
                 pairWith: [
                     { name: 'IV Therapy', slug: 'iv-therapy', categorySlug: 'recovery-performance' },
