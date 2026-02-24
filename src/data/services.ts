@@ -123,6 +123,7 @@ export const servicesData: ServiceCategory[] = [
                     'Comfortable injection session (often involving a cannula to minimize bruising)',
                     'Strict "massage rule" post-care guidance (the 5-5-5 rule for Sculptra)'
                 ],
+                imageSrc: '/images/services/biostimulators.jpg',
                 resultsAndTiming: 'Results are not immediate. Your body builds collagen gradually over 8 to 12 weeks. Best outcomes typically appear between 3–6 months and can last 2+ years.',
                 pairWith: [
                     { name: 'Neurotoxins', slug: 'neurotoxins', categorySlug: 'advanced-aesthetics' },
