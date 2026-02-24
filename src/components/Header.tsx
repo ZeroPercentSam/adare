@@ -8,6 +8,7 @@ export default function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isServicesOpen, setIsServicesOpen] = useState(false);
+    const [isMembershipOpen, setIsMembershipOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -39,12 +40,18 @@ export default function Header() {
                     <div className={styles.desktopMenu}>
                         <button
                             className={styles.menuItem}
-                            onClick={() => setIsServicesOpen(true)}
+                            onClick={() => { setIsServicesOpen(true); setIsMembershipOpen(false); }}
                             aria-expanded={isServicesOpen}
                         >
                             Services
                         </button>
-                        <Link href="/membership" className={styles.menuItem}>Membership</Link>
+                        <button
+                            className={styles.menuItem}
+                            onClick={() => { setIsMembershipOpen(true); setIsServicesOpen(false); }}
+                            aria-expanded={isMembershipOpen}
+                        >
+                            Membership
+                        </button>
                         <Link href="/for-men" className={styles.menuItem}>For Men</Link>
                         <Link href="/for-women" className={styles.menuItem}>For Women</Link>
                         <Link href="/about" className={styles.menuItem}>About</Link>
@@ -135,6 +142,39 @@ export default function Header() {
                 </div>
             </div>
 
+            {/* Membership Mega Menu Overlay */}
+            <div className={`${styles.megaMenu} ${isMembershipOpen ? styles.megaMenuOpen : ''}`}>
+                <div className={styles.megaMenuHeader}>
+                    <h2>MEMBERSHIP</h2>
+                    <button
+                        className={styles.closeButton}
+                        onClick={() => setIsMembershipOpen(false)}
+                        aria-label="Close membership menu"
+                    >
+                        ✕
+                    </button>
+                </div>
+
+                <div className={styles.megaMenuContent}>
+                    <div className={styles.category}>
+                        <Link href="/membership" onClick={() => setIsMembershipOpen(false)}>
+                            <h3>Compare Memberships</h3>
+                        </Link>
+                        <ul>
+                            <li><Link href="/membership/glow" onClick={() => setIsMembershipOpen(false)}>Glow Membership</Link></li>
+                            <li><Link href="/membership/foundation" onClick={() => setIsMembershipOpen(false)}>Foundation Membership</Link></li>
+                            <li><Link href="/membership/adare" onClick={() => setIsMembershipOpen(false)}>ADARE Membership</Link></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div className={styles.megaMenuFooter}>
+                    <Link href="/membership" className={styles.bookButtonLarge} onClick={() => setIsMembershipOpen(false)}>
+                        View All Memberships
+                    </Link>
+                </div>
+            </div>
+
             {/* Mobile Menu Slide-in */}
             <div className={`${styles.mobileMenu} ${isMobileMenuOpen ? styles.mobileMenuOpen : ''}`}>
                 <div className={styles.mobileMenuLinks}>
@@ -143,11 +183,21 @@ export default function Header() {
                         onClick={() => {
                             setIsMobileMenuOpen(false);
                             setIsServicesOpen(true);
+                            setIsMembershipOpen(false);
                         }}
                     >
                         Services
                     </button>
-                    <Link href="/membership" className={styles.mobileMenuItem} onClick={() => setIsMobileMenuOpen(false)}>Membership</Link>
+                    <button
+                        className={styles.mobileMenuItem}
+                        onClick={() => {
+                            setIsMobileMenuOpen(false);
+                            setIsMembershipOpen(true);
+                            setIsServicesOpen(false);
+                        }}
+                    >
+                        Membership
+                    </button>
                     <Link href="/for-men" className={styles.mobileMenuItem} onClick={() => setIsMobileMenuOpen(false)}>For Men</Link>
                     <Link href="/for-women" className={styles.mobileMenuItem} onClick={() => setIsMobileMenuOpen(false)}>For Women</Link>
                     <Link href="/about" className={styles.mobileMenuItem} onClick={() => setIsMobileMenuOpen(false)}>About</Link>

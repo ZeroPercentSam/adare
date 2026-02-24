@@ -72,7 +72,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                                 key={service.slug}
                                 title={service.name}
                                 description={service.tagline}
-                                imageSrc={`/images/services/${service.slug}.webp`} // Placeholder paths
+                                imageSrc={service.imageSrc || `/images/services/${service.slug}.webp`} // Use custom image or fallback
                                 categoryLink={`/services/${categoryData.slug}/${service.slug}`}
                                 bookingLink={service.bookingUrl}
                                 delay={index * 0.1}

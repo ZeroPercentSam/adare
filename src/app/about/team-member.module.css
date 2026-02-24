@@ -1,0 +1,124 @@
+.profileContainer {
+    padding: var(--spacing-16) 0;
+    max-width: 1200px;
+}
+
+.profileGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-12);
+}
+
+@media (min-width: 1024px) {
+    .profileGrid {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+        gap: var(--spacing-16);
+    }
+}
+
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/5;
+    background-color: var(--color-surface);
+}
+
+.profileImage {
+    object-fit: cover;
+}
+
+.profileContent {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-8);
+}
+
+.header {
+    margin-bottom: var(--spacing-4);
+}
+
+.name {
+    font-family: var(--font-serif);
+    font-size: 48px;
+    margin-bottom: var(--spacing-2);
+    line-height: 1.1;
+}
+
+@media (max-width: 768px) {
+    .name {
+        font-size: 36px;
+    }
+}
+
+.title {
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    color: var(--color-muted-text);
+    text-transform: uppercase;
+    line-height: 1.6;
+}
+
+.section {
+    border-top: 1px solid var(--color-divider);
+    padding-top: var(--spacing-6);
+}
+
+.sectionTitle {
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: var(--spacing-4);
+    color: var(--color-primary);
+}
+
+.bio p {
+    margin-bottom: var(--spacing-4);
+    line-height: 1.8;
+    color: var(--color-text);
+}
+
+.list {
+    list-style-type: none;
+    padding: 0;
+    line-height: 1.6;
+    color: var(--color-text);
+}
+
+.list li {
+    position: relative;
+    padding-left: var(--spacing-6);
+    margin-bottom: var(--spacing-3);
+}
+
+.list li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--color-muted-text);
+}
+
+.locations {
+    display: flex;
+    gap: var(--spacing-4);
+    flex-wrap: wrap;
+    margin-top: var(--spacing-2);
+}
+
+.locationBadge {
+    display: inline-block;
+    padding: var(--spacing-3) var(--spacing-5);
+    background-color: var(--color-surface);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+}
+
+.ctaSection {
+    margin-top: var(--spacing-8);
+}

@@ -25,6 +25,7 @@ export interface ServiceDetail {
     pairWith: PairWithService[];
     faqs: FaqItem[];
     bookingUrl: string;
+    imageSrc?: string;
     metaTitle: string;
     metaDescription: string;
 }
@@ -49,7 +50,7 @@ export const servicesData: ServiceCategory[] = [
         tagline: 'Refinement without overcorrection.',
         intro: 'Aesthetics at ADARE is designed for structure, balance, and skin health. Every plan is intentional.',
         categoryBookingUrl: '/book?type=aesthetics',
-        imageSrc: '/images/aesthetics-hero.webp',
+        imageSrc: '/images/aesthetics-hero.png',
         metaTitle: 'Advanced Aesthetics · ADARE Tampa Bay',
         metaDescription: 'Precision injectables, microneedling, HydraFacial, biostimulators, and hair restoration. Natural refinement designed for you.',
         services: [
@@ -176,6 +177,7 @@ export const servicesData: ServiceCategory[] = [
                     'Step 2: Automated painless Extractions + Hydration',
                     'Step 3: Fusing + Protection with customized antioxidants and peptides'
                 ],
+                imageSrc: '/images/services/facials-facial.jpg',
                 resultsAndTiming: 'Results are instantaneous. You will leave the clinic with an incredible, luminous glow. To maintain optimal skin cell turnover and health, treatments are highly recommended every 4 weeks.',
                 pairWith: [
                     { name: 'Neurotoxins', slug: 'neurotoxins', categorySlug: 'advanced-aesthetics' },
@@ -227,7 +229,7 @@ export const servicesData: ServiceCategory[] = [
         tagline: 'Inside-out optimization for energy, clarity, and longevity.',
         intro: 'Comprehensive lab-guided hormone therapy, weight loss, peptide, and NAD+ programs built for peak performance.',
         categoryBookingUrl: '/book?type=wellness',
-        imageSrc: '/images/longevity-hero.webp',
+        imageSrc: '/images/longevity-hero.png',
         metaTitle: 'Longevity & Metabolic Wellness · ADARE',
         metaDescription: 'Lab-guided hormone optimization, medical weight loss, peptide therapy, and NAD+ programs built for peak performance.',
         services: [
@@ -349,7 +351,7 @@ export const servicesData: ServiceCategory[] = [
         tagline: 'Recover faster. Perform longer.',
         intro: 'Hyperbaric oxygen, red light, and IV therapy to accelerate recovery and resilience.',
         categoryBookingUrl: '/book?type=recovery',
-        imageSrc: '/images/recovery-hero.webp',
+        imageSrc: '/images/recovery-hero-new.jpg',
         metaTitle: 'Recovery & Performance · ADARE Tampa Bay',
         metaDescription: 'IV therapy, red light therapy, and hyperbaric oxygen therapy for accelerated recovery and resilience.',
         services: [
@@ -418,6 +420,7 @@ export const servicesData: ServiceCategory[] = [
                     'A guided "dive" in our spacious, modern chamber (typically 60-90 minutes)',
                     'Monitoring by our trained technicians during the compression and decompression phases'
                 ],
+                imageSrc: '/images/services/hyperbaric-man.jpg',
                 resultsAndTiming: 'Patients often report immense mental clarity and deep relaxation after a single dive. For chronic inflammation, surgery recovery, or severe tissue repair, a "protocol" of 10 to 40 consecutive sessions is clinically recommended for permanent physiological change.',
                 pairWith: [
                     { name: 'Red Light Therapy', slug: 'red-light-therapy', categorySlug: 'recovery-performance' },
@@ -441,7 +444,7 @@ export const servicesData: ServiceCategory[] = [
         tagline: 'Sculpted outcomes, measurable change.',
         intro: 'Emsculpt NEO for simultaneous muscle building and fat reduction with no downtime.',
         categoryBookingUrl: '/book?type=body',
-        imageSrc: '/images/body-hero.webp',
+        imageSrc: '/images/body-hero.png',
         metaTitle: 'Body Contouring · Emsculpt NEO · ADARE',
         metaDescription: 'Emsculpt NEO for muscle building and fat reduction with measurable, no-downtime results at ADARE Tampa Bay.',
         services: [
@@ -457,6 +460,7 @@ export const servicesData: ServiceCategory[] = [
                     'A 30-minute intense session alternating between profound heating and intense muscle contractions',
                     'Zero post-treatment restrictions; you can immediately return to the gym or the office'
                 ],
+                imageSrc: '/images/services/clinic-emsculpt.jpg',
                 resultsAndTiming: 'You will feel intense muscle engagement immediately. Clinical studies show an average 25% increase in muscle mass and a 30% reduction in fat. Visual changes peak around 8 to 12 weeks following your final session as the body fully metabolizes the destroyed fat cells.',
                 pairWith: [
                     { name: 'Medical Weight Loss', slug: 'medical-weight-loss', categorySlug: 'longevity-metabolic-wellness' },

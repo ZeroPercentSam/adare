@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../demographic.module.css';
 import { IconHarmony, IconRadiance, IconVitality, IconEmotional, IconPowerhouse, IconMatriarch, IconAgeless } from '@/components/GlossyIcons';
@@ -86,6 +87,16 @@ export default function ForWomenPage() {
     return (
         <main className={styles.page}>
             <section className={styles.hero}>
+                <div className={styles.heroBackground}>
+                    <Image
+                        src="/images/for-women-hero.png"
+                        alt="For Women Hero"
+                        fill
+                        priority
+                        className={styles.heroImage}
+                    />
+                    <div className={styles.heroOverlay}></div>
+                </div>
                 <div className="container" style={{ zIndex: 2 }}>
                     <h1>For Women</h1>
                     <p>Protocols designed for female optimization.</p>

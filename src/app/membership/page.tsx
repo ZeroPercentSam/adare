@@ -29,7 +29,7 @@ export default function MembershipPage() {
             <section className={styles.hero}>
                 <div className={styles.heroBackground}>
                     <Image
-                        src="/images/membership-hero.webp"
+                        src="/images/membership-hero.png"
                         alt="ADARE Membership"
                         fill
                         className={styles.heroImage}

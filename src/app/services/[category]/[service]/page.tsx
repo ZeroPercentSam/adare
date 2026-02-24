@@ -56,7 +56,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
             <section className={styles.hero}>
                 <div className={styles.heroBackground}>
                     <Image
-                        src={`/images/services/${serviceData.slug}-hero.webp`}
+                        src={serviceData.imageSrc || `/images/services/${serviceData.slug}-hero.webp`}
                         alt={serviceData.name}
                         fill
                         priority
@@ -174,7 +174,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                                     key={pair.slug}
                                     title={pairService.name}
                                     description={pairService.tagline}
-                                    imageSrc={`/images/services/${pairService.slug}.webp`}
+                                    imageSrc={pairService.imageSrc || `/images/services/${pairService.slug}.webp`}
                                     categoryLink={`/services/${pair.categorySlug}/${pair.slug}`}
                                     bookingLink={pairService.bookingUrl}
                                     delay={index * 0.1}

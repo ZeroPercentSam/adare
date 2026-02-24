@@ -14,7 +14,7 @@ export default function AboutPage() {
             <section className={styles.hero}>
                 <div className={styles.heroBackground}>
                     <Image
-                        src="/images/about-hero.webp"
+                        src="/images/about-hero.png"
                         alt="ADARE Clinic Interior"
                         fill
                         className={styles.heroImage}
@@ -33,16 +33,25 @@ export default function AboutPage() {
                 <div className="container">
                     <div className={styles.storyGrid}>
                         <div className={styles.storyText}>
-                            <h2>The ADARE Philosophy</h2>
+                            <h2>The Story of Adare</h2>
                             <p>
-                                ADARE was founded on a simple premise: longevity, aesthetics, and cellular medicine should be delivered with clinical integrity and elevated design. We believe that optimization is not episodic—it requires consistency, precision, and an evidence-based approach.
+                                Adare is where longevity and elevated aesthetics come together with intention and refinement. It is designed for those who move through life with clarity, confidence, and ease, and who want their wellbeing and presence to reflect the same excellence they bring to everything else.
                             </p>
                             <p>
-                                Our protocols are lab-first, tailored to your unique biology, and designed to support you from the inside out. We do not chase trends. We follow the science to deliver measurable change and natural refinement.
+                                Adare is for women and men who expect more. They come with full lives, ambitious goals, and a desire to feel strong, confident, and at ease in their bodies. Whether building careers, leading teams, raising families, or entering a new chapter, they seek a place that meets them with warmth, intelligence, and true expertise.
                             </p>
-                            <div className={styles.signature}>
-                                <Image src="/images/signature-placeholder.webp" alt="Founders Signature" width={150} height={50} />
-                            </div>
+                            <p>
+                                Clients arrive seeking balance, radiance, or renewal. Some come to soften the impact of stress. Others want to age gracefully and intentionally. Many simply want to reconnect with the version of themselves that feels centered, capable, and well. Here, wellbeing is not an escape from life but an essential part of living it fully.
+                            </p>
+                            <p>
+                                The Adare philosophy is shaped by modern expertise and refined taste. Treatments are purposeful and precise. Aesthetics are subtle and timeless, enhancing what is already authentic. Every experience is designed to support the life you are actively building.
+                            </p>
+                            <p>
+                                The name Adare comes from the Irish <em>Áth Dara</em>, the ford of the oak. The imagery is quietly powerful: the rooted presence of the oak alongside water that moves with ease. It reflects a place where resilience and renewal coexist, and where transformation is approached with intention and grace.
+                            </p>
+                            <p>
+                                Adare offers restoration without retreat, expertise without excess. It is a place where wellbeing becomes a more beautiful way of living, and where you step into the fullest expression of yourself.
+                            </p>
                         </div>
                         <div className={styles.storyImageWrapper}>
                             <Image
@@ -83,44 +92,78 @@ export default function AboutPage() {
             {/* Team Section */}
             <section className={styles.teamSection}>
                 <div className="container">
-                    <h2 className="text-center" style={{ marginBottom: 'var(--spacing-16)' }}>The Providers</h2>
+                    <h2 className="text-center" style={{ marginBottom: 'var(--spacing-16)' }}>The Adare Team</h2>
                     <div className={styles.teamGrid}>
-                        {/* Provider 1 */}
-                        <div className={styles.providerCard}>
+                        <a href="/about/trudy-fehlinger" className={styles.providerCard}>
                             <div className={styles.providerImageWrapper}>
                                 <Image
-                                    src="/images/provider-1.webp"
-                                    alt="Dr. Sarah Johnson"
+                                    src="/images/team/trudy-fehlinger-founder-tampa.jpg"
+                                    alt="Trudy Fehlinger - Founder"
                                     fill
                                     className={styles.providerImage}
                                 />
                             </div>
                             <div className={styles.providerInfo}>
-                                <h3>Dr. Sarah Johnson, MD</h3>
-                                <p className={styles.providerRole}>Medical Director</p>
-                                <p className={styles.providerBio}>
-                                    Board-certified physician specializing in functional medicine, hormone optimization, and cellular therapies. Dr. Johnson oversees all clinical protocols at ADARE.
-                                </p>
+                                <h3>Trudy Fehlinger</h3>
+                                <p className={styles.providerRole}>Founder</p>
                             </div>
-                        </div>
-                        {/* Provider 2 */}
-                        <div className={styles.providerCard}>
+                        </a>
+                        <a href="/about/katie-andaur" className={styles.providerCard}>
                             <div className={styles.providerImageWrapper}>
                                 <Image
-                                    src="/images/provider-2.webp"
-                                    alt="Jessica Evans, APRN"
+                                    src="/images/team/katie-andaur-coo-tampa.jpg"
+                                    alt="Katie Andaur - COO"
                                     fill
                                     className={styles.providerImage}
                                 />
                             </div>
                             <div className={styles.providerInfo}>
-                                <h3>Jessica Evans, APRN</h3>
-                                <p className={styles.providerRole}>Lead Aesthetic Injector</p>
-                                <p className={styles.providerBio}>
-                                    Advanced Practice Registered Nurse with over a decade of experience in facial anatomy, neuromodulators, and biostimulatory treatments.
-                                </p>
+                                <h3>Katie Andaur</h3>
+                                <p className={styles.providerRole}>Chief Operating Officer</p>
                             </div>
-                        </div>
+                        </a>
+                        <a href="/about/natacha-christeler" className={styles.providerCard}>
+                            <div className={styles.providerImageWrapper}>
+                                <Image
+                                    src="/images/team/natacha-christeler-real.png"
+                                    alt="Natacha Christeler - APRN-BC, MSN, BSN"
+                                    fill
+                                    className={styles.providerImage}
+                                />
+                            </div>
+                            <div className={styles.providerInfo}>
+                                <h3>Natacha Christeler, APRN</h3>
+                                <p className={styles.providerRole}>Top 100 Aesthetic Injector</p>
+                            </div>
+                        </a>
+                        <a href="/about/tammy-gwozdz" className={styles.providerCard}>
+                            <div className={styles.providerImageWrapper}>
+                                <Image
+                                    src="/images/team/tammy-gwozdz-nurse-practitioner-tampa.jpg"
+                                    alt="Tammy Gwozdz - MSN, APRN"
+                                    fill
+                                    className={styles.providerImage}
+                                />
+                            </div>
+                            <div className={styles.providerInfo}>
+                                <h3>Tammy Gwozdz, APRN</h3>
+                                <p className={styles.providerRole}>Nurse Practitioner</p>
+                            </div>
+                        </a>
+                        <a href="/about/amber-brnovich" className={styles.providerCard}>
+                            <div className={styles.providerImageWrapper}>
+                                <Image
+                                    src="/images/team/Amber-Brnovich-Esthetician-tampa.jpg"
+                                    alt="Amber Brnovich - Esthetician"
+                                    fill
+                                    className={styles.providerImage}
+                                />
+                            </div>
+                            <div className={styles.providerInfo}>
+                                <h3>Amber Brnovich</h3>
+                                <p className={styles.providerRole}>Advanced Medical Esthetician</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </section>

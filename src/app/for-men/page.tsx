@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../demographic.module.css';
 import { getServiceCategory } from '@/data/services';
@@ -93,6 +94,16 @@ export default function ForMenPage() {
     return (
         <main className={styles.page}>
             <section className={styles.hero}>
+                <div className={styles.heroBackground}>
+                    <Image
+                        src="/images/for-men-hero.png"
+                        alt="For Men Hero"
+                        fill
+                        priority
+                        className={styles.heroImage}
+                    />
+                    <div className={styles.heroOverlay}></div>
+                </div>
                 <div className="container" style={{ zIndex: 2 }}>
                     <h1>For Men</h1>
                     <p>Protocols designed for peak male performance.</p>
