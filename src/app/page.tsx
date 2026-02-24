@@ -3,6 +3,7 @@ import styles from './page.module.css';
 import Button from '@/components/Button';
 import ServiceCard from '@/components/ServiceCard';
 import HeroNav from '@/components/HeroNav';
+import SplitLocations from '@/components/SplitLocations';
 
 export default function Home() {
     return (
@@ -116,23 +117,7 @@ export default function Home() {
             </section>
 
             {/* Locations */}
-            <section className={styles.sectionLocations}>
-                <div className="container text-center">
-                    <div className={styles.locationsWrapper}>
-                        <div className={styles.locationInfo}>
-                            <h2>Locations</h2>
-                            <div className={styles.locationList}>
-                                <p>South Tampa</p>
-                                <p>St. Pete</p>
-                            </div>
-                            <div className={styles.locationActions}>
-                                <Button href="/locations" variant="outline">View Locations</Button>
-                                <Button href="/book" variant="primary">Book Now</Button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <SplitLocations />
 
             {/* Footer CTA */}
             <section className={styles.sectionFooterCta}>

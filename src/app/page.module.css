@@ -193,34 +193,6 @@
     margin-inline: auto;
 }
 
-/* Locations Section */
-.sectionLocations {
-    padding: var(--spacing-24) 0;
-    background-color: var(--color-background);
-}
-
-.locationsWrapper {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.locationList {
-    display: flex;
-    justify-content: center;
-    gap: var(--spacing-8);
-    margin-bottom: var(--spacing-8);
-    font-family: var(--font-serif);
-    font-size: 24px;
-    color: var(--color-muted-text);
-}
-
-.locationActions {
-    display: flex;
-    justify-content: center;
-    gap: var(--spacing-4);
-    flex-wrap: wrap;
-}
-
 /* Footer CTA Section */
 .sectionFooterCta {
     padding: var(--spacing-16) 0 var(--spacing-24) 0;
