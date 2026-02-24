@@ -30,9 +30,23 @@ export default function LocationsDirectory() {
     return (
         <>
             <section className={styles.hero}>
+                <div className={styles.heroBackground}>
+                    <Image
+                        src="/images/location-tampa-hero.webp"
+                        alt="ADARE Locations"
+                        fill
+                        priority
+                        className={styles.heroImage}
+                        sizes="100vw"
+                    />
+                    <div className={styles.heroOverlay}></div>
+                </div>
                 <div className={styles.heroContent}>
-                    <h1>Locations</h1>
-                    <p>Find your nearest ADARE Longevity & Aesthetics clinic in Tampa Bay.</p>
+                    <div className="container">
+                        <span className={styles.heroLabel}>Visit Us</span>
+                        <h1 className={styles.heroTitle}>Locations</h1>
+                        <p className={styles.heroTagline}>Find your nearest ADARE Longevity & Aesthetics clinic in Tampa Bay.</p>
+                    </div>
                 </div>
             </section>
 

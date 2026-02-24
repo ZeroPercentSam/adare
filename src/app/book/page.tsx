@@ -1,4 +1,5 @@
 import { Suspense } from 'react';
+import Image from 'next/image';
 import BookingForm from './BookingForm';
 import styles from './page.module.css';
 import { principles } from '@/data/principles';
@@ -13,11 +14,25 @@ export default function BookPage() {
     return (
         <div className={styles.container}>
             <section className={styles.heroSection}>
-                <div className="container">
-                    <h1 className={styles.title}>Book Your Consultation</h1>
-                    <p className={styles.subtitle}>
-                        Take the first step towards tailored optimization. Select your desired service and we will contact you to confirm a timeframe.
-                    </p>
+                <div className={styles.heroBackground}>
+                    <Image
+                        src="/images/book-hero.png"
+                        alt="Book at ADARE"
+                        fill
+                        priority
+                        className={styles.heroImage}
+                        sizes="100vw"
+                    />
+                    <div className={styles.heroOverlay}></div>
+                </div>
+                <div className={styles.heroContent}>
+                    <div className="container">
+                        <span className={styles.heroLabel}>Get Started</span>
+                        <h1 className={styles.heroTitle}>Book Your Consultation</h1>
+                        <p className={styles.heroTagline}>
+                            Take the first step towards tailored optimization. Select your desired service and we will contact you to confirm a timeframe.
+                        </p>
+                    </div>
                 </div>
             </section>
 

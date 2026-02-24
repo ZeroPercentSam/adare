@@ -101,12 +101,16 @@ export default function ForMenPage() {
                         fill
                         priority
                         className={styles.heroImage}
+                        sizes="100vw"
                     />
                     <div className={styles.heroOverlay}></div>
                 </div>
-                <div className="container" style={{ zIndex: 2 }}>
-                    <h1>For Men</h1>
-                    <p>Protocols designed for peak male performance.</p>
+                <div className={styles.heroContent}>
+                    <div className="container">
+                        <span className={styles.heroLabel}>Demographics</span>
+                        <h1 className={styles.heroTitle}>For Men</h1>
+                        <p className={styles.heroTagline}>Protocols designed for peak male performance.</p>
+                    </div>
                 </div>
             </section>
 

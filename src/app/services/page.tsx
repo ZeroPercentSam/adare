@@ -7,6 +7,28 @@ import Button from '@/components/Button';
 export default function ServicesDirectory() {
     return (
         <div className={styles.container}>
+            {/* Standard Hero */}
+            <section className={styles.hero}>
+                <div className={styles.heroBackground}>
+                    <Image
+                        src="/images/longevity-hero.png"
+                        alt="ADARE Services"
+                        fill
+                        priority
+                        className={styles.heroImage}
+                        sizes="100vw"
+                    />
+                    <div className={styles.heroOverlay}></div>
+                </div>
+                <div className={styles.heroContent}>
+                    <div className="container">
+                        <span className={styles.heroLabel}>Our Offerings</span>
+                        <h1 className={styles.heroTitle}>Services</h1>
+                        <p className={styles.heroTagline}>Comprehensive aesthetic and longevity treatments tailored to your biology.</p>
+                    </div>
+                </div>
+            </section>
+
             {/* 4 Full-Screen Category Tiles */}
             <section className={styles.heroGrid}>
                 {servicesData.map((category) => (

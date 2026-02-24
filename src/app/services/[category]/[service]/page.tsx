@@ -65,10 +65,13 @@ export default async function ServicePage({ params }: ServicePageProps) {
                     <div className={styles.heroOverlay}></div>
                 </div>
                 <div className={styles.heroContent}>
-                    <h1>{serviceData.name}</h1>
-                    <p className={styles.heroTagline}>{serviceData.tagline}</p>
-                    <div className={styles.heroActions}>
-                        <Button href={serviceData.bookingUrl} variant="primary">Book Now</Button>
+                    <div className="container">
+                        <span className={styles.heroLabel}>Service Protocol</span>
+                        <h1 className={styles.heroTitle}>{serviceData.name}</h1>
+                        <p className={styles.heroTagline}>{serviceData.tagline}</p>
+                        <div className={styles.heroActions}>
+                            <Button href={serviceData.bookingUrl} variant="primary">Book This Service</Button>
+                        </div>
                     </div>
                 </div>
             </section>

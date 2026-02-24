@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from '../membership-detail.module.css';
 import Button from '@/components/Button';
 
@@ -10,10 +11,24 @@ export const metadata = {
 export default function AdareMembershipPage() {
     return (
         <main>
-            <section className={styles.hero} style={{ backgroundColor: '#11131C' }}>
-                <div className="container">
-                    <h1 style={{ color: 'var(--color-accent-warm)' }}>ADARE Membership</h1>
-                    <p>Comprehensive optimization, fully integrated.</p>
+            <section className={styles.hero}>
+                <div className={styles.heroBackground}>
+                    <Image
+                        src="/images/membership-hero.png"
+                        alt="ADARE Membership"
+                        fill
+                        priority
+                        className={styles.heroImage}
+                        sizes="100vw"
+                    />
+                    <div className={styles.heroOverlay}></div>
+                </div>
+                <div className={styles.heroContent}>
+                    <div className="container">
+                        <span className={styles.heroLabel}>Membership Tier</span>
+                        <h1 className={styles.heroTitle} style={{ color: 'var(--color-accent-warm)' }}>ADARE Membership</h1>
+                        <p className={styles.heroTagline}>Comprehensive optimization, fully integrated.</p>
+                    </div>
                 </div>
             </section>
 

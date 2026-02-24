@@ -94,12 +94,16 @@ export default function ForWomenPage() {
                         fill
                         priority
                         className={styles.heroImage}
+                        sizes="100vw"
                     />
                     <div className={styles.heroOverlay}></div>
                 </div>
-                <div className="container" style={{ zIndex: 2 }}>
-                    <h1>For Women</h1>
-                    <p>Protocols designed for female optimization.</p>
+                <div className={styles.heroContent}>
+                    <div className="container">
+                        <span className={styles.heroLabel}>Demographics</span>
+                        <h1 className={styles.heroTitle}>For Women</h1>
+                        <p className={styles.heroTagline}>Protocols designed for female optimization.</p>
+                    </div>
                 </div>
             </section>
 

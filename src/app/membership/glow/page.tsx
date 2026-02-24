@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from '../membership-detail.module.css';
 import Button from '@/components/Button';
 
@@ -11,9 +12,23 @@ export default function GlowMembershipPage() {
     return (
         <main>
             <section className={styles.hero}>
-                <div className="container">
-                    <h1>Glow Membership</h1>
-                    <p>Consistent care. Elevated value.</p>
+                <div className={styles.heroBackground}>
+                    <Image
+                        src="/images/membership-hero.png"
+                        alt="Glow Membership"
+                        fill
+                        priority
+                        className={styles.heroImage}
+                        sizes="100vw"
+                    />
+                    <div className={styles.heroOverlay}></div>
+                </div>
+                <div className={styles.heroContent}>
+                    <div className="container">
+                        <span className={styles.heroLabel}>Membership Tier</span>
+                        <h1 className={styles.heroTitle}>Glow Membership</h1>
+                        <p className={styles.heroTagline}>Consistent care. Elevated value.</p>
+                    </div>
                 </div>
             </section>
 

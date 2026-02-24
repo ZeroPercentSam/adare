@@ -23,8 +23,11 @@ export default function AboutPage() {
                     <div className={styles.heroOverlay}></div>
                 </div>
                 <div className={styles.heroContent}>
-                    <h1>About ADARE</h1>
-                    <p>Medical. Intentional. Evidence-Based.</p>
+                    <div className="container">
+                        <span className={styles.heroLabel}>Our Story</span>
+                        <h1 className={styles.heroTitle}>About ADARE</h1>
+                        <p className={styles.heroTagline}>Medical. Intentional. Evidence-Based.</p>
+                    </div>
                 </div>
             </section>
 

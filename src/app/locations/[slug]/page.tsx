@@ -92,10 +92,13 @@ export default async function LocationPage({ params }: LocationPageProps) {
                     <div className={styles.heroOverlay}></div>
                 </div>
                 <div className={styles.heroContent}>
-                    <h1>{data.name}</h1>
-                    <p>{data.address}</p>
-                    <div className={styles.heroActions}>
-                        <Button href={`/book?location=${resolvedParams.slug}`} variant="primary">Book at {data.name}</Button>
+                    <div className="container">
+                        <span className={styles.heroLabel}>Location</span>
+                        <h1 className={styles.heroTitle}>{data.name}</h1>
+                        <p className={styles.heroTagline}>{data.address}</p>
+                        <div className={styles.heroActions}>
+                            <Button href={`/book?location=${resolvedParams.slug}`} variant="primary">Book at {data.name}</Button>
+                        </div>
                     </div>
                 </div>
             </section>

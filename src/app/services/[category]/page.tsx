@@ -58,9 +58,12 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                     <div className={styles.heroOverlay}></div>
                 </div>
                 <div className={styles.heroContent}>
-                    <h1>{categoryData.name}</h1>
-                    <p className={styles.heroTagline}>{categoryData.tagline}</p>
-                    <p className={styles.heroIntro}>{categoryData.intro}</p>
+                    <div className="container">
+                        <span className={styles.heroLabel}>Service Category</span>
+                        <h1 className={styles.heroTitle}>{categoryData.name}</h1>
+                        <p className={styles.heroTagline}>{categoryData.tagline}</p>
+                        <p className={styles.heroIntro}>{categoryData.intro}</p>
+                    </div>
                 </div>
             </section>
 

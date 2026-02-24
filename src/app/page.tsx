@@ -23,11 +23,14 @@ export default function Home() {
                     <div className={styles.heroOverlay}></div>
                 </div>
                 <div className={styles.heroContent}>
-                    <h1>For Those Who Expect More.</h1>
-                    <p>Longevity, aesthetics, and cellular medicine delivered with clinical integrity and elevated design.</p>
-                    <div className={styles.heroActions}>
-                        <Button href="/services" variant="outline" className={styles.heroButton}>Explore Services</Button>
-                        <Button href="/book" variant="primary">Book Now</Button>
+                    <div className="container">
+                        <span className={styles.heroLabel}>Tampa Bay's Premier Clinic</span>
+                        <h1 className={styles.heroTitle}>For Those Who Expect More.</h1>
+                        <p className={styles.heroTagline}>Longevity, aesthetics, and cellular medicine delivered with clinical integrity and elevated design.</p>
+                        <div className={styles.heroActions}>
+                            <Button href="/services" variant="outline" className={styles.heroButton}>Explore Services</Button>
+                            <Button href="/book" variant="primary">Book Now</Button>
+                        </div>
                     </div>
                 </div>
 

@@ -1,14 +1,12 @@
 .nav {
     width: 100%;
     padding: var(--spacing-4) var(--spacing-4);
-    background-color: transparent;
-    transition: background-color var(--transition-normal);
-    color: var(--color-primary);
-}
-
-.scrolled {
     background-color: var(--color-background);
     border-bottom: 1px solid var(--color-divider);
+    color: var(--color-primary);
+    position: relative;
+    /* ensure it stays above the hero section underneath it */
+    z-index: 100;
 }
 
 .navContainer {

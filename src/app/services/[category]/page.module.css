@@ -1,13 +1,11 @@
 /* Hero Section */
 .hero {
     position: relative;
-    height: 60vh;
+    height: 70vh;
     min-height: 500px;
     display: flex;
     align-items: center;
-    justify-content: center;
     overflow: hidden;
-    text-align: center;
 }
 
 .heroBackground {
@@ -18,50 +16,59 @@
 
 .heroImage {
     object-fit: cover;
+    transform: scale(1.05);
 }
 
 .heroOverlay {
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    /* For text contrast */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.1) 100%);
+    z-index: 2;
 }
 
 .heroContent {
     position: relative;
-    z-index: 2;
+    z-index: 3;
+    width: 100%;
     color: var(--color-primary-inverse);
-    padding: var(--spacing-4);
-    max-width: 800px;
 }
 
-.heroContent h1 {
-    color: var(--color-primary-inverse);
-    font-size: clamp(36px, 4vw, 56px);
+.heroLabel {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
     margin-bottom: var(--spacing-4);
-    animation: fadeUp 0.6s var(--transition-slow) forwards;
-    opacity: 0;
-    transform: translateY(20px);
+    opacity: 0.8;
+}
+
+.heroTitle {
+    color: var(--color-primary-inverse);
+    margin-bottom: var(--spacing-4);
+    max-width: 800px;
+    font-size: clamp(40px, 6vw, 72px);
+    line-height: 1.1;
+    animation: fadeUp 0.8s var(--transition-slow) forwards;
 }
 
 .heroTagline {
-    font-family: var(--font-serif);
-    font-size: clamp(20px, 2.5vw, 28px);
-    margin-bottom: var(--spacing-6);
-    color: var(--color-accent-warm);
-    animation: fadeUp 0.6s var(--transition-slow) 0.1s forwards;
+    font-size: clamp(18px, 2.5vw, 24px);
+    max-width: 600px;
     opacity: 0;
-    transform: translateY(20px);
+    font-weight: 400;
+    animation: fadeUp 0.8s var(--transition-slow) 0.1s forwards;
 }
 
 .heroIntro {
     font-family: var(--font-sans);
     font-size: 16px;
     line-height: 1.6;
+    max-width: 600px;
     opacity: 0.9;
     animation: fadeUp 0.6s var(--transition-slow) 0.2s forwards;
     opacity: 0;
-    transform: translateY(20px);
+    margin-top: var(--spacing-4);
 }
 
 @keyframes fadeUp {

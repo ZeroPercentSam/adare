@@ -13,15 +13,6 @@ export default function Header() {
     const [isAboutOpen, setIsAboutOpen] = useState(false);
 
     useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 20);
-        };
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
-    // Close menus on resize to desktop
-    useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth >= 1024) {
                 setIsMobileMenuOpen(false);
@@ -33,7 +24,7 @@ export default function Header() {
 
     return (
         <>
-            <nav className={`${styles.nav} ${isScrolled ? styles.scrolled : ''}`}>
+            <nav className={styles.nav}>
                 <div className={styles.navContainer}>
                     <Link href="/" className={styles.logo}>
                         ADARE

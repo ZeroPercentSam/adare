@@ -38,8 +38,11 @@ export default function MembershipPage() {
                     <div className={styles.heroOverlay}></div>
                 </div>
                 <div className={styles.heroContent}>
-                    <h1>Membership</h1>
-                    <p>Consistent care. Preferential access. Elevated value.</p>
+                    <div className="container">
+                        <span className={styles.heroLabel}>Our Packages</span>
+                        <h1 className={styles.heroTitle}>Membership</h1>
+                        <p className={styles.heroTagline}>Consistent care. Preferential access. Elevated value.</p>
+                    </div>
                 </div>
             </section>
 

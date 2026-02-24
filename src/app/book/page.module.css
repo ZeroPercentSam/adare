@@ -4,28 +4,73 @@
     background-color: var(--color-background);
 }
 
+/* Hero Section */
 .heroSection {
-    background-color: var(--color-background);
-    padding: var(--spacing-20) 0 var(--spacing-16);
-    border-bottom: 1px solid var(--color-divider);
-    text-align: center;
+    position: relative;
+    height: 70vh;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
 }
 
-.title {
-    font-family: var(--font-heading);
-    font-size: var(--text-4xl);
-    font-weight: 300;
-    margin-bottom: var(--spacing-6);
+.heroBackground {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.heroImage {
+    object-fit: cover;
+    transform: scale(1.05);
+}
+
+.heroOverlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.1) 100%);
+    z-index: 2;
+}
+
+.heroContent {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    color: var(--color-primary-inverse);
+}
+
+.heroLabel {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: var(--spacing-4);
+    opacity: 0.8;
+}
+
+.heroTitle {
+    color: var(--color-primary-inverse);
+    margin-bottom: var(--spacing-4);
+    max-width: 800px;
+    font-size: clamp(40px, 6vw, 72px);
     line-height: 1.1;
-    color: var(--color-primary);
+    animation: fadeUp 0.8s var(--transition-slow) forwards;
 }
 
-.subtitle {
+.heroTagline {
+    font-size: clamp(18px, 2.5vw, 24px);
     max-width: 600px;
-    margin: 0 auto;
-    font-size: var(--text-lg);
-    color: var(--color-muted-text);
-    line-height: 1.6;
+    opacity: 0;
+    font-weight: 400;
+    animation: fadeUp 0.8s var(--transition-slow) 0.1s forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .formSection {
