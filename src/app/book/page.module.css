@@ -311,7 +311,7 @@
 }
 
 /* Global Centering for Hero Content */
-.heroContent .container {
+.heroContent :global(.container) {
     display: flex;
     flex-direction: column;
     align-items: center;
