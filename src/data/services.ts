@@ -50,7 +50,7 @@ export const servicesData: ServiceCategory[] = [
         tagline: 'Refinement without overcorrection.',
         intro: 'Aesthetics at ADARE is designed for structure, balance, and skin health. Every plan is intentional.',
         categoryBookingUrl: '/book?type=aesthetics',
-        imageSrc: '/images/aesthetics-hero.png',
+        imageSrc: '/images/aesthetics-hero-new.jpg',
         metaTitle: 'Advanced Aesthetics · ADARE Tampa Bay',
         metaDescription: 'Precision injectables, microneedling, HydraFacial, biostimulators, and hair restoration. Natural refinement designed for you.',
         services: [
@@ -234,7 +234,7 @@ export const servicesData: ServiceCategory[] = [
         tagline: 'Inside-out optimization for energy, clarity, and longevity.',
         intro: 'Comprehensive lab-guided hormone therapy, weight loss, peptide, and NAD+ programs built for peak performance.',
         categoryBookingUrl: '/book?type=wellness',
-        imageSrc: '/images/longevity-hero.png',
+        imageSrc: '/images/longevity-hero-new.jpg',
         metaTitle: 'Longevity & Metabolic Wellness · ADARE',
         metaDescription: 'Lab-guided hormone optimization, medical weight loss, peptide therapy, and NAD+ programs built for peak performance.',
         services: [
@@ -449,7 +449,7 @@ export const servicesData: ServiceCategory[] = [
         tagline: 'Sculpted outcomes, measurable change.',
         intro: 'Emsculpt NEO for simultaneous muscle building and fat reduction with no downtime.',
         categoryBookingUrl: '/book?type=body',
-        imageSrc: '/images/body-hero.png',
+        imageSrc: '/images/body-hero-new.jpg',
         metaTitle: 'Body Contouring · Emsculpt NEO · ADARE',
         metaDescription: 'Emsculpt NEO for muscle building and fat reduction with measurable, no-downtime results at ADARE Tampa Bay.',
         services: [
