@@ -22,6 +22,14 @@ export const metadata: Metadata = {
         description: 'Luxury longevity, aesthetics, and cellular medicine in Tampa Bay. Hormone optimization, medical weight loss, injectables, and recovery services.',
         url: 'https://adaremd.com',
         siteName: 'ADARE Longevity & Aesthetics',
+        images: [
+            {
+                url: 'https://adaremd.com/images/meta-image-new.jpg',
+                width: 1200,
+                height: 630,
+                alt: 'ADARE Tampa Bay',
+            },
+        ],
         type: 'website',
     },
 };
@@ -39,7 +47,7 @@ export default function RootLayout({
                         "@context": "https://schema.org",
                         "@type": "MedicalClinic",
                         "name": "ADARE Longevity & Aesthetics",
-                        "image": "https://adaremd.com/images/meta-image.webp",
+                        "image": "https://adaremd.com/images/meta-image-new.jpg",
                         "@id": "https://adaremd.com",
                         "url": "https://adaremd.com",
                         "telephone": "(813) 555-0100",
