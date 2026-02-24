@@ -181,7 +181,7 @@ export const servicesData: ServiceCategory[] = [
                     'Step 2: Automated painless Extractions + Hydration',
                     'Step 3: Fusing + Protection with customized antioxidants and peptides'
                 ],
-                imageSrc: '/images/services/facials-facial.jpg',
+                imageSrc: '/images/services/hydrafacial.jpg',
                 resultsAndTiming: 'Results are instantaneous. You will leave the clinic with an incredible, luminous glow. To maintain optimal skin cell turnover and health, treatments are highly recommended every 4 weeks.',
                 pairWith: [
                     { name: 'Neurotoxins', slug: 'neurotoxins', categorySlug: 'advanced-aesthetics' },
