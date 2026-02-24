@@ -3,6 +3,7 @@
 :root {
   --color-primary: #000000;
   --color-primary-inverse: #FFFFFF;
+  --color-button-hover: #333333;
   --color-background: #FFFFFF;
   --color-accent-warm: #C9B99A;
   --color-body-text: #1A1A1A;
@@ -55,6 +56,8 @@
   :root {
     --color-background: #000000;
     --color-primary: #FFFFFF;
+    --color-primary-inverse: #000000;
+    --color-button-hover: #E5E5E5;
     --color-body-text: #E5E5E5;
     --color-muted-text: #A3A3A3;
     --color-divider: #333333;

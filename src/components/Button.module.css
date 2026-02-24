@@ -30,13 +30,13 @@
 }
 
 .primary:hover {
-    background-color: #333333;
+    background-color: var(--color-button-hover);
     color: var(--color-primary-inverse);
 }
 
 .secondary {
     background-color: var(--color-accent-warm);
-    color: var(--color-primary);
+    color: #000000;
 }
 
 .secondary:hover {
