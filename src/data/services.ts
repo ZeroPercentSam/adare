@@ -209,6 +209,7 @@ export const servicesData: ServiceCategory[] = [
                     'Scalp preparation and medical-grade microneedling session',
                     'Application of regenerative serums (Exosomes/Peptides) and aftercare guidance'
                 ],
+                imageSrc: '/images/services/hair-restoration.jpg',
                 resultsAndTiming: 'Hair growth relies on long biological cycles. You may begin to notice decreased shedding within weeks, followed by new growth and increased density gradually appearing over 3 to 6 months. A dedicated series of treatments is required.',
                 pairWith: [
                     { name: 'Hormone Optimization', slug: 'hormone-optimization', categorySlug: 'longevity-metabolic-wellness' },
