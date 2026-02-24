@@ -398,11 +398,12 @@ export const servicesData: ServiceCategory[] = [
                 overview: 'Red Light Therapy (Photobiomodulation) utilizes specific wavelengths of red and near-infrared light to directly stimulate the mitochondria—the powerhouses of your cells. This medical-grade light deeply penetrates the skin and underlying tissue, triggering an avalanche of cellular energy (ATP) production. This increased ATP forces the body to rapidly decrease systemic inflammation, massively accelerate muscle recovery, and aggressively upregulate natural collagen production. It is completely non-invasive, painless, and profoundly relaxing. At ADARE, we utilize full-body panels to ensure systemic exposure. Because of its incredible ability to lower inflammation and boost collagen, a quick Red Light session is the perfect "add-on" directly following <a href="/services/advanced-aesthetics/microneedling">Microneedling</a>, or as a standalone recovery tool between heavy workouts.',
                 bestFor: ['Drastically reducing post-workout muscle soreness (DOMS)', 'Lowering systemic joint inflammation and arthritis pain', 'Boosting natural collagen production for full-body skin vitality', 'Resetting circadian rhythms for deeper, more restorative sleep', 'Accelerating wound healing post-surgery or post-procedure'],
                 expectations: [
-                    'Brief orientation on the equipment and optimal positioning',
-                    'A 15 to 20-minute entirely painless session bathed in therapeutic red light',
-                    'Immediate return to all daily activities with zero downtime or restrictions'
+                    'Relaxing 20-30 minute session under clinical-grade LED panels',
+                    'Specific waveforms selected based on your goals (e.g., collagen production vs. deep tissue repair)',
+                    'Can be performed as a standalone treatment or layered immediately after aesthetics procedures'
                 ],
-                resultsAndTiming: 'While you may feel exceptionally relaxed immediately following a session, the true benefits of Photobiomodulation are cumulative. Best results for skin tightening, joint pain relief, and systemic recovery occur with regular use (2 to 3 times weekly).',
+                imageSrc: '/images/services/red-light-therapy.jpg',
+                resultsAndTiming: 'A single session provides immediate reduction in inflammation and a subtle glow. For systemic benefits, accelerated muscle recovery, and notable skin tightening, a consistent series of 2-3 sessions per week is recommended.',
                 pairWith: [
                     { name: 'Hyperbaric Oxygen Therapy', slug: 'hyperbaric-oxygen-therapy', categorySlug: 'recovery-performance' },
                     { name: 'IV Therapy', slug: 'iv-therapy', categorySlug: 'recovery-performance' },
