@@ -47,7 +47,7 @@ export default function Home() {
                         <ServiceCard
                             title="Advanced Aesthetics"
                             description="Precision injectables and regenerative skin treatments designed for natural refinement."
-                            imageSrc="/images/aesthetics-category.webp"
+                            imageSrc="/images/aesthetics-hero-new.jpg"
                             categoryLink="/services/advanced-aesthetics"
                             bookingLink="/book"
                             delay={0}
@@ -55,7 +55,7 @@ export default function Home() {
                         <ServiceCard
                             title="Longevity & Metabolic Wellness"
                             description="Lab-guided hormone, weight loss, peptide, and NAD+ programs built for performance."
-                            imageSrc="/images/longevity-category.webp"
+                            imageSrc="/images/longevity-hero-new.jpg"
                             categoryLink="/services/longevity-metabolic-wellness"
                             bookingLink="/book"
                             delay={0.1}
@@ -63,7 +63,7 @@ export default function Home() {
                         <ServiceCard
                             title="Recovery & Performance"
                             description="Hyperbaric oxygen, red light, and IV therapy to accelerate recovery and resilience."
-                            imageSrc="/images/recovery-category.webp"
+                            imageSrc="/images/recovery-hero-new.jpg"
                             categoryLink="/services/recovery-performance"
                             bookingLink="/book"
                             delay={0.2}
@@ -71,7 +71,7 @@ export default function Home() {
                         <ServiceCard
                             title="Body Contouring"
                             description="Emsculpt NEO for muscle and fat outcomes with measurable change."
-                            imageSrc="/images/body-category.webp"
+                            imageSrc="/images/body-hero-new.jpg"
                             categoryLink="/services/body-contouring"
                             bookingLink="/book"
                             delay={0.3}
