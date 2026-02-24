@@ -45,6 +45,8 @@ export default function Header() {
                             Services
                         </button>
                         <Link href="/membership" className={styles.menuItem}>Membership</Link>
+                        <Link href="/for-men" className={styles.menuItem}>For Men</Link>
+                        <Link href="/for-women" className={styles.menuItem}>For Women</Link>
                         <Link href="/about" className={styles.menuItem}>About</Link>
                         <Link href="/locations" className={styles.menuItem}>Locations</Link>
                     </div>
@@ -146,6 +148,8 @@ export default function Header() {
                         Services
                     </button>
                     <Link href="/membership" className={styles.mobileMenuItem} onClick={() => setIsMobileMenuOpen(false)}>Membership</Link>
+                    <Link href="/for-men" className={styles.mobileMenuItem} onClick={() => setIsMobileMenuOpen(false)}>For Men</Link>
+                    <Link href="/for-women" className={styles.mobileMenuItem} onClick={() => setIsMobileMenuOpen(false)}>For Women</Link>
                     <Link href="/about" className={styles.mobileMenuItem} onClick={() => setIsMobileMenuOpen(false)}>About</Link>
                     <Link href="/locations" className={styles.mobileMenuItem} onClick={() => setIsMobileMenuOpen(false)}>Locations</Link>
                 </div>

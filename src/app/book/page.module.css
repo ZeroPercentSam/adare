@@ -5,9 +5,9 @@
 }
 
 .heroSection {
-    background-color: var(--color-surface);
+    background-color: var(--color-background);
     padding: var(--spacing-20) 0 var(--spacing-16);
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-divider);
     text-align: center;
 }
 
@@ -17,14 +17,14 @@
     font-weight: 300;
     margin-bottom: var(--spacing-6);
     line-height: 1.1;
-    color: var(--color-text-primary);
+    color: var(--color-primary);
 }
 
 .subtitle {
     max-width: 600px;
     margin: 0 auto;
     font-size: var(--text-lg);
-    color: var(--color-text-secondary);
+    color: var(--color-muted-text);
     line-height: 1.6;
 }
 
@@ -35,15 +35,15 @@
 .formCard {
     max-width: 700px;
     margin: 0 auto;
-    background-color: var(--color-surface);
-    border: 1px solid var(--color-border);
+    background-color: var(--color-background);
+    border: 1px solid var(--color-divider);
     padding: var(--spacing-10);
 }
 
 .loading {
     text-align: center;
     padding: var(--spacing-10);
-    color: var(--color-text-secondary);
+    color: var(--color-muted-text);
 }
 
 .form {
@@ -67,7 +67,7 @@
 .label {
     font-size: var(--text-sm);
     font-weight: 500;
-    color: var(--color-text-primary);
+    color: var(--color-primary);
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
@@ -76,11 +76,11 @@
 .select,
 .textarea {
     background-color: var(--color-background);
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--color-primary);
     padding: var(--spacing-3) var(--spacing-4);
     font-family: var(--font-body);
     font-size: var(--text-base);
-    color: var(--color-text-primary);
+    color: var(--color-primary);
     width: 100%;
     transition: all 0.2s ease;
 }
@@ -89,8 +89,8 @@
 .select:focus,
 .textarea:focus {
     outline: none;
-    border-color: var(--color-text-primary);
-    box-shadow: 0 0 0 1px var(--color-text-primary);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 1px var(--color-primary);
 }
 
 .select {
@@ -107,8 +107,8 @@
 }
 
 .submitButton {
-    background-color: var(--color-text-primary);
-    color: var(--color-background);
+    background-color: var(--color-primary);
+    color: var(--color-primary-inverse);
     border: none;
     padding: var(--spacing-4) var(--spacing-8);
     font-family: var(--font-body);
@@ -124,7 +124,7 @@
 
 .submitButton:hover {
     background-color: var(--color-accent-warm);
-    color: var(--color-text-primary);
+    color: var(--color-primary);
 }
 
 .successMessage {
@@ -143,7 +143,7 @@
 }
 
 .successMessage p {
-    color: var(--color-text-secondary);
+    color: var(--color-muted-text);
     max-width: 400px;
     margin: 0 auto;
     line-height: 1.6;

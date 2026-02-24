@@ -68,13 +68,15 @@
     }
 }
 
-/* Details Section */
-.detailsSection {
+/* Protocol Section Light Layout */
+.protocolSection {
     padding: var(--spacing-24) 0;
     background-color: var(--color-background);
+    color: var(--color-text);
+    border-top: 1px solid var(--color-divider);
 }
 
-.contentGrid {
+.protocolGrid {
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--spacing-16);
@@ -83,105 +85,218 @@
 }
 
 @media (min-width: 1024px) {
-    .contentGrid {
-        grid-template-columns: 2fr 1fr;
+    .protocolGrid {
+        grid-template-columns: 1.5fr 1fr;
     }
 }
 
-.mainContent h2 {
-    font-size: clamp(28px, 3vw, 36px);
-    margin-bottom: var(--spacing-6);
+.sectionBlock {
+    margin-bottom: var(--spacing-16);
 }
 
-.mainContent p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: var(--color-muted-text);
-    margin-bottom: var(--spacing-12);
+.sectionBlock h2 {
+    font-size: clamp(24px, 3vw, 32px);
+    margin-bottom: var(--spacing-8);
+    color: var(--color-primary);
+    font-family: var(--font-sans);
+    font-weight: 400;
 }
 
-/* Elegant List */
-.elegantList {
-    list-style: none;
+/* Protocol Boxes */
+.protocolBoxes {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-4);
-    margin-bottom: var(--spacing-12);
 }
 
-.elegantList li {
-    position: relative;
-    padding-left: var(--spacing-6);
-    font-size: 16px;
-    color: var(--color-body-text);
-}
-
-.elegantList li::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 10px;
-    width: 6px;
-    height: 6px;
-    background-color: var(--color-accent-warm);
-    border-radius: 50%;
-}
-
-/* Numbered List */
-.numberedList {
-    list-style: none;
-    counter-reset: step-counter;
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-6);
-    margin-bottom: var(--spacing-12);
-}
-
-.numberedList li {
-    position: relative;
-    padding-left: var(--spacing-12);
-    font-size: 16px;
-    color: var(--color-body-text);
-    min-height: 32px;
+.protocolBox {
+    background-color: var(--color-background);
+    border: 1px solid var(--color-divider);
+    border-radius: 8px;
+    padding: var(--spacing-6) var(--spacing-8);
     display: flex;
     align-items: center;
+    gap: var(--spacing-6);
+    transition: border-color var(--transition-fast);
 }
 
-.numberedList li::before {
-    counter-increment: step-counter;
-    content: counter(step-counter);
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    border: 1px solid var(--color-divider);
+.protocolBox:hover {
+    border-color: var(--color-accent-warm);
+}
+
+.checkIcon {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: var(--font-serif);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: rgba(201, 185, 154, 0.1);
+    color: var(--color-accent-warm);
+    padding: 4px;
+}
+
+/* Science Text */
+.scienceText {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--color-text);
+}
+
+.scienceText a {
+    color: var(--color-accent-warm);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(201, 185, 154, 0.3);
+    transition: all var(--transition-fast);
+}
+
+.scienceText a:hover {
+    border-bottom-color: var(--color-accent-warm);
+}
+
+/* The Experience */
+.experienceList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-8);
+}
+
+.experienceItem {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-6);
+}
+
+.experienceNumber {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid var(--color-accent-warm);
+    color: var(--color-accent-warm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-family: var(--font-sans);
+}
+
+.experienceItem p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-text);
+    margin-top: 4px;
+}
+
+/* RIGHT COLUMN (Sidebar) */
+
+.protocolSidebar h2 {
+    font-size: clamp(24px, 3vw, 32px);
+    margin-bottom: var(--spacing-8);
     color: var(--color-primary);
-    font-size: 14px;
+    font-family: var(--font-sans);
+    font-weight: 400;
 }
 
-/* Sidebar */
-.sidebar {
-    position: relative;
+.outcomesBlock {
+    margin-bottom: var(--spacing-16);
 }
 
-.bestForCard {
-    background-color: #FAFAFA;
-    padding: var(--spacing-8);
-    position: sticky;
-    top: 120px;
-}
-
-.bestForCard h3 {
-    font-size: 24px;
+.outcomeItem {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-4);
     margin-bottom: var(--spacing-6);
-    border-bottom: 1px solid var(--color-divider);
-    padding-bottom: var(--spacing-4);
+}
+
+.outcomeNumber {
+    font-family: var(--font-serif);
+    font-size: 16px;
+    color: var(--color-accent-warm);
+    opacity: 0.8;
+    margin-top: 2px;
+}
+
+.outcomeContent h4 {
+    font-size: 18px;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-2);
+}
+
+.outcomeContent p {
+    font-size: 14px;
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+.sidebarBox {
+    background-color: var(--color-background);
+    border: 1px solid var(--color-divider);
+    border-radius: 8px;
+    padding: var(--spacing-8);
+    margin-bottom: var(--spacing-6);
+    transition: border-color var(--transition-fast);
+}
+
+.sidebarBox:hover {
+    border-color: var(--color-accent-warm);
+}
+
+.sidebarBox h3 {
+    font-size: 16px;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-4);
+    font-weight: 400;
+}
+
+.sidebarBox p {
+    font-size: 14px;
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+.ctaBox {
+    background-color: #fafafa;
+    border: 1px solid var(--color-divider);
+    border-radius: 8px;
+    padding: var(--spacing-10) var(--spacing-8);
+    margin-top: var(--spacing-8);
+}
+
+.ctaBox h3 {
+    font-size: 20px;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-4);
+}
+
+.ctaBox p {
+    font-size: 14px;
+    color: var(--color-text);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-8);
+}
+
+.ctaButton {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    background-color: #9A7B4F;
+    /* Darker muted gold */
+    color: #ffffff;
+    font-family: var(--font-sans);
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 16px 24px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+    border-radius: 4px;
+}
+
+.ctaButton:hover {
+    background-color: #836741;
 }
 
 /* Pair With Section */

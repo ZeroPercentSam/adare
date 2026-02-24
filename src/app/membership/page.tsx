@@ -11,12 +11,17 @@ export const metadata: Metadata = {
 
 export default function MembershipPage() {
     const faqs = [
+        { question: 'How much will I actually save by becoming a member?', answer: 'Members inherently receive preferential pricing that quickly offsets the monthly cost. For instance, Glow members save 10-15% on aesthetics, while Foundation and ADARE members often save thousands annually when factoring in complimentary labs, included therapies, and priority booking.' },
+        { question: 'Are there any hidden fees or initiation costs?', answer: 'No. We pride ourselves on transparent, straightforward pricing. Your chosen tier\'s monthly fee is exactly what you pay, with no surprise initiation fees or hidden administrative charges.' },
+        { question: 'How does the Glow credit banking work?', answer: 'Your $199 monthly fee is banked into your "Glow Vault," which can be applied directly to eligible aesthetic services or used for a monthly HydraFacial. It’s not a lost fee; it’s an investment into your next treatment.' },
+        { question: 'What happens if I don\'t use my monthly Glow credit?', answer: 'Your banked credits roll over from month to month as long as your membership remains active. You will never lose the value you’ve invested.' },
+        { question: 'What bloodwork is included with Foundation?', answer: 'The Foundation membership includes extensive quarterly comprehensive metabolic, hormonal, and micronutrient panels to precisely guide your protocol. These panels alone would traditionally cost more than the membership itself.' },
+        { question: 'Is there a minimum commitment or am I locked into a long-term contract?', answer: 'We request an initial 3-month commitment to ensure we have adequate time to establish your baseline and begin seeing clinical progress. After that, your membership runs month-to-month.' },
         { question: 'Can I switch tiers?', answer: 'Yes, you can upgrade or downgrade your membership tier at any time with a 30-day notice to accommodate your evolving optimization goals.' },
-        { question: 'How does the Glow credit banking work?', answer: 'Your $199 monthly fee is banked into your "Glow Vault," which can be applied directly to eligible aesthetic services or used for a monthly HydraFacial.' },
-        { question: 'What bloodwork is included with Foundation?', answer: 'The Foundation membership includes extensive quarterly comprehensive metabolic, hormonal, and micronutrient panels to precisely guide your protocol.' },
-        { question: 'What is the booking process for members?', answer: 'Members receive access to a priority booking portal and direct text access to our concierge wellness coordinators.' },
-        { question: 'Is there a minimum commitment?', answer: 'We request an initial 3-month commitment to ensure we have adequate time to establish your baseline and begin seeing clinical progress.' },
-        { question: 'Can I pause my membership?', answer: 'Yes, memberships can be paused for up to 2 months per calendar year.' },
+        { question: 'Can I share my membership discounts or credits with a friend or family member?', answer: 'Memberships are highly individualized and tied to your personal medical and aesthetic record, so they cannot be shared. However, members receive an annual "Guest Pass" to gift a specific treatment at member pricing.' },
+        { question: 'Can I pause my membership?', answer: 'Yes, we understand life happens. Memberships can be paused for up to 2 months per calendar year without penalty.' },
+        { question: 'What if I need to cancel?', answer: 'After the initial 3-month period, you may cancel at any time with a 30-day written notice. Any banked credits must be used prior to final cancellation.' },
+        { question: 'What is the booking process for members?', answer: 'Members receive exclusive access to a priority booking portal and direct text access to our concierge wellness coordinators, ensuring you get the appointment times you need.' },
     ];
 
     return (
@@ -57,7 +62,7 @@ export default function MembershipPage() {
                                 </ul>
                             </div>
                             <div className={styles.tierActions}>
-                                <Button href="/book?type=membership-glow" variant="primary" className={styles.fullWidthButton}>Join Glow</Button>
+                                <Button href="/membership/glow" variant="primary" className={styles.fullWidthButton}>Explore Glow</Button>
                                 <Button href="/book?type=consultation-glow" variant="outline" className={styles.fullWidthButton}>Book Consultation</Button>
                             </div>
                         </div>
@@ -78,7 +83,7 @@ export default function MembershipPage() {
                                 </ul>
                             </div>
                             <div className={styles.tierActions}>
-                                <Button href="/book?type=membership-foundation" variant="secondary" className={styles.fullWidthButton}>Join Foundation</Button>
+                                <Button href="/membership/foundation" variant="secondary" className={styles.fullWidthButton}>Explore Foundation</Button>
                                 <Button href="/book?type=consultation-wellness" variant="outline" className={styles.fullWidthButtonLight}>Start with Labs</Button>
                             </div>
                         </div>
@@ -101,7 +106,7 @@ export default function MembershipPage() {
                                 </ul>
                             </div>
                             <div className={styles.tierActions}>
-                                <Button href="/book?type=membership-adare" variant="primary" className={styles.fullWidthButton}>Apply for ADARE Membership</Button>
+                                <Button href="/membership/adare" variant="primary" className={styles.fullWidthButton}>Explore ADARE</Button>
                                 <Button href="/book?type=consultation-private" variant="outline" className={styles.fullWidthButton}>Book Private Consultation</Button>
                             </div>
                         </div>

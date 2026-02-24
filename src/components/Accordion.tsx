@@ -29,9 +29,11 @@ function AccordionItem({ question, answer, isOpen, onClick }: AccordionItemProps
                 className={styles.contentWrapper}
                 style={{ height: isOpen ? `${contentRef.current?.scrollHeight}px` : '0px' }}
             >
-                <div className={styles.content} ref={contentRef}>
-                    {answer}
-                </div>
+                <div
+                    className={styles.content}
+                    ref={contentRef}
+                    dangerouslySetInnerHTML={{ __html: answer }}
+                />
             </div>
         </div>
     );

@@ -30,7 +30,7 @@
 }
 
 .primary:hover {
-    background-color: var(--color-muted-text);
+    background-color: #333333;
     color: var(--color-primary-inverse);
 }
 

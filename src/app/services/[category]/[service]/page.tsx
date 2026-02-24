@@ -73,50 +73,89 @@ export default async function ServicePage({ params }: ServicePageProps) {
                 </div>
             </section>
 
-            <section className={styles.detailsSection}>
+            <section className={styles.protocolSection}>
                 <div className="container">
-                    <div className={styles.contentGrid}>
-                        <div className={styles.mainContent}>
-                            <div className={styles.overviewBlock}>
-                                <h2>Overview</h2>
-                                <p>{serviceData.overview}</p>
-                            </div>
+                    <div className={styles.protocolGrid}>
 
-                            {serviceData.options && (
-                                <div className={styles.optionsBlock}>
-                                    <h3>Options</h3>
-                                    <ul className={styles.elegantList}>
-                                        {serviceData.options.map((opt, i) => (
-                                            <li key={i}>{opt.name}</li>
-                                        ))}
-                                    </ul>
+                        {/* LEFT COLUMN: The Protocol, Science, Experience */}
+                        <div className={styles.protocolMain}>
+
+                            <div className={styles.sectionBlock}>
+                                <h2>The Protocol</h2>
+                                <div className={styles.protocolBoxes}>
+                                    {serviceData.options && serviceData.options.length > 0 ? (
+                                        serviceData.options.map((opt, i) => (
+                                            <div key={i} className={styles.protocolBox}>
+                                                <div className={styles.checkIcon}>
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                                </div>
+                                                <span>{opt.name}</span>
+                                            </div>
+                                        ))
+                                    ) : (
+                                        <div className={styles.protocolBox}>
+                                            <div className={styles.checkIcon}>
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                            </div>
+                                            <span>{serviceData.name} Core Protocol</span>
+                                        </div>
+                                    )}
                                 </div>
-                            )}
+                            </div>
 
-                            <div className={styles.expectationsBlock}>
-                                <h2>What to Expect</h2>
-                                <ol className={styles.numberedList}>
+                            <div className={styles.sectionBlock}>
+                                <h2>The Science</h2>
+                                <div className={styles.scienceText} dangerouslySetInnerHTML={{ __html: serviceData.overview }} />
+                            </div>
+
+                            <div className={styles.sectionBlock}>
+                                <h2>The Experience</h2>
+                                <div className={styles.experienceList}>
                                     {serviceData.expectations.map((step, i) => (
-                                        <li key={i}>{step}</li>
+                                        <div key={i} className={styles.experienceItem}>
+                                            <div className={styles.experienceNumber}>{i + 1}</div>
+                                            <p>{step}</p>
+                                        </div>
                                     ))}
-                                </ol>
+                                </div>
                             </div>
 
-                            <div className={styles.resultsBlock}>
-                                <h2>Results & Timing</h2>
-                                <p>{serviceData.resultsAndTiming}</p>
-                            </div>
                         </div>
 
-                        <aside className={styles.sidebar}>
-                            <div className={styles.bestForCard}>
-                                <h3>Best For</h3>
-                                <ul className={styles.elegantList}>
-                                    {serviceData.bestFor.map((item, i) => (
-                                        <li key={i}>{item}</li>
-                                    ))}
-                                </ul>
+                        {/* RIGHT COLUMN: Outcomes, Ideal Candidate, Contraindications, CTA */}
+                        <aside className={styles.protocolSidebar}>
+
+                            <div className={styles.outcomesBlock}>
+                                <h2>Expected Outcomes</h2>
+                                <div className={styles.outcomeItem}>
+                                    <div className={styles.outcomeNumber}>01</div>
+                                    <div className={styles.outcomeContent}>
+                                        <h4>Primary Result</h4>
+                                        <p>{serviceData.resultsAndTiming}</p>
+                                    </div>
+                                </div>
                             </div>
+
+                            <div className={styles.sidebarBox}>
+                                <h3>Ideal Candidate</h3>
+                                <p>{serviceData.bestFor.join(', ')}.</p>
+                            </div>
+
+                            <div className={styles.sidebarBox}>
+                                <h3>Contraindications</h3>
+                                <p>Active infection, certain autoimmune conditions, pregnancy, or known allergies to components. Consult with our medical team to determine if this protocol aligns with your current health status and medical history.</p>
+                            </div>
+
+                            <div className={styles.ctaBox}>
+                                <h3>Is this right for you?</h3>
+                                <p>Every protocol begins with a comprehensive evaluation to ensure it aligns with your unique physiology and goals.</p>
+                                <div className={styles.ctaButtonWrapper}>
+                                    <Link href={serviceData.bookingUrl} className={styles.ctaButton}>
+                                        INQUIRE ABOUT THIS PROTOCOL
+                                    </Link>
+                                </div>
+                            </div>
+
                         </aside>
                     </div>
                 </div>

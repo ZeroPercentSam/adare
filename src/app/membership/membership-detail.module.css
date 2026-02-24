@@ -1,0 +1,111 @@
+.hero {
+    background-color: var(--color-primary);
+    color: var(--color-primary-inverse);
+    text-align: center;
+    padding: var(--spacing-24) var(--spacing-4);
+}
+
+.hero h1 {
+    font-size: clamp(40px, 5vw, 64px);
+    margin-bottom: var(--spacing-4);
+}
+
+.hero p {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.detailSection {
+    padding: var(--spacing-24) 0;
+    background-color: var(--color-background);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-16);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: 1.5fr 1fr;
+    }
+}
+
+.infoBlock h2 {
+    font-size: 32px;
+    margin-bottom: var(--spacing-6);
+    color: var(--color-primary);
+}
+
+.infoBlock p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--color-body-text);
+    margin-bottom: var(--spacing-6);
+}
+
+.infoBlock ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: var(--spacing-8);
+}
+
+.infoBlock li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 16px;
+    margin-bottom: var(--spacing-4);
+    color: var(--color-body-text);
+    line-height: 1.5;
+}
+
+.infoBlock li::before {
+    content: '✓';
+    color: var(--color-accent-warm);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.pricingCard {
+    background-color: #fafafa;
+    border: 1px solid var(--color-divider);
+    padding: var(--spacing-10);
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pricingCard h3 {
+    font-size: 24px;
+    margin-bottom: var(--spacing-4);
+    color: var(--color-primary);
+}
+
+.price {
+    font-size: 64px;
+    font-family: var(--font-serif);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-2);
+}
+
+.price span {
+    font-size: 18px;
+    font-family: var(--font-sans);
+    color: var(--color-muted-text);
+}
+
+.pricingSubline {
+    font-size: 14px;
+    color: var(--color-muted-text);
+    margin-bottom: var(--spacing-8);
+}
+
+.spacing {
+    margin-bottom: var(--spacing-4);
+}
