@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import styles from '../demographic.module.css';
 import { getServiceCategory } from '@/data/services';
-import { Shield, Brain, Activity, Battery, Briefcase, Dumbbell, Medal } from 'lucide-react';
+import { IconPrecision, IconCognition, IconPerformance, IconResilience, IconExecutive, IconAthlete, IconLegacy } from '@/components/GlossyIcons';
 import Button from '@/components/Button';
 
 export const metadata = {
@@ -13,22 +13,22 @@ const PILLARS = [
     {
         title: 'Endurance & Performance',
         description: 'Protocols designed to keep you sharp, energetic, and resilient in the boardroom and the gym.',
-        icon: <Activity size={24} className={styles.iconSVG} />
+        icon: <IconPerformance size={32} />
     },
     {
         title: 'Cognition',
         description: 'Sharpen focus, memory, and executive function through targeted peptide and vascular therapy.',
-        icon: <Brain size={24} className={styles.iconSVG} />
+        icon: <IconCognition size={32} />
     },
     {
         title: 'Precision Over Correction',
         description: 'Subtle, structural changes that preserve masculine features without looking "done".',
-        icon: <Shield size={24} className={styles.iconSVG} />
+        icon: <IconPrecision size={32} />
     },
     {
         title: 'Resilience',
         description: 'Enhance recovery and stress adaptation for high-stakes lifestyles.',
-        icon: <Battery size={24} className={styles.iconSVG} />
+        icon: <IconResilience size={32} />
     }
 ];
 
@@ -36,17 +36,17 @@ const DEMOGRAPHICS = [
     {
         title: 'The Executive',
         description: 'Demanding schedules require rapid recovery. High-dose NAD+ and targeted injectables to soften stress lines while maintaining command.',
-        icon: <Briefcase size={32} className={styles.iconSVGBlock} />
+        icon: <IconExecutive size={48} />
     },
     {
         title: 'The Athlete',
         description: 'Former or current competitors looking to maintain peak physicality and recover faster from injury.',
-        icon: <Dumbbell size={32} className={styles.iconSVGBlock} />
+        icon: <IconAthlete size={48} />
     },
     {
         title: 'The Legacy',
         description: 'Men focused on longevity and extending their healthspan to enjoy wealth and family for decades.',
-        icon: <Medal size={32} className={styles.iconSVGBlock} />
+        icon: <IconLegacy size={48} />
     }
 ];
 
@@ -99,7 +99,7 @@ export default function ForMenPage() {
                 </div>
             </section>
 
-            <section className={styles.darkSection}>
+            <section className={styles.lightSection}>
                 <div className="container">
                     <div className={styles.fourColGrid}>
                         {PILLARS.map((pillar, i) => (
@@ -113,7 +113,7 @@ export default function ForMenPage() {
                 </div>
             </section>
 
-            <section className={styles.darkSection} style={{ backgroundColor: '#11131C' }}>
+            <section className={styles.lightSection} style={{ backgroundColor: '#fafafa' }}>
                 <div className="container">
                     <h2 className={styles.sectionTitle}>Who We Treat</h2>
                     <div className={styles.threeColGrid}>

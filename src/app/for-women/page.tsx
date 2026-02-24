@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import styles from '../demographic.module.css';
-import { Scale, Sparkles, Sunrise, HeartPulse, Briefcase, Baby, Hourglass } from 'lucide-react';
+import { IconHarmony, IconRadiance, IconVitality, IconEmotional, IconPowerhouse, IconMatriarch, IconAgeless } from '@/components/GlossyIcons';
 import Button from '@/components/Button';
 
 export const metadata = {
@@ -12,22 +12,22 @@ const PILLARS = [
     {
         title: 'Hormonal Harmony',
         description: 'Addressing menopause, thyroid function, and metabolic health with precision.',
-        icon: <Scale size={24} className={styles.iconSVG} />
+        icon: <IconHarmony size={32} />
     },
     {
         title: 'Radiance',
         description: 'Inside-out aesthetic strategies combining peptides, gut health, and regenerative skin therapies.',
-        icon: '✨'
+        icon: <IconRadiance size={32} />
     },
     {
         title: 'Vitality',
         description: 'Combat fatigue and optimize sleep architecture for sustained energy.',
-        icon: <Sunrise size={24} className={styles.iconSVG} />
+        icon: <IconVitality size={32} />
     },
     {
         title: 'Emotional Wellness',
         description: 'Neurotransmitter balancing to support mood, stress resilience, and clarity.',
-        icon: '🧘‍♀️'
+        icon: <IconEmotional size={32} />
     }
 ];
 
@@ -35,17 +35,17 @@ const DEMOGRAPHICS = [
     {
         title: 'The Powerhouse',
         description: 'Female founders and leaders balancing high-pressure careers with biological optimization.',
-        icon: <Briefcase size={32} className={styles.iconSVGBlock} />
+        icon: <IconPowerhouse size={48} />
     },
     {
         title: 'The Matriarch',
         description: 'Mothers navigating post-partum recovery or prioritizing energy to keep up with a growing family.',
-        icon: <Baby size={32} className={styles.iconSVGBlock} />
+        icon: <IconMatriarch size={48} />
     },
     {
         title: 'The Ageless',
         description: 'Women navigating perimenopause or menopause who refuse to accept decline as a "normal" part of aging.',
-        icon: <Hourglass size={32} className={styles.iconSVGBlock} />
+        icon: <IconAgeless size={48} />
     }
 ];
 
@@ -92,7 +92,7 @@ export default function ForWomenPage() {
                 </div>
             </section>
 
-            <section className={styles.darkSection}>
+            <section className={styles.lightSection}>
                 <div className="container">
                     <div className={styles.fourColGrid}>
                         {PILLARS.map((pillar, i) => (
@@ -106,7 +106,7 @@ export default function ForWomenPage() {
                 </div>
             </section>
 
-            <section className={styles.darkSection} style={{ backgroundColor: '#11131C' }}>
+            <section className={styles.lightSection} style={{ backgroundColor: '#fafafa' }}>
                 <div className="container">
                     <h2 className={styles.sectionTitle}>Who We Treat</h2>
                     <div className={styles.threeColGrid}>
