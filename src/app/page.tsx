@@ -2,7 +2,7 @@ import Image from 'next/image';
 import styles from './page.module.css';
 import Button from '@/components/Button';
 import ServiceCard from '@/components/ServiceCard';
-import { Sparkles, Activity, BatteryCharging, Dumbbell, Crown } from 'lucide-react';
+import HeroNav from '@/components/HeroNav';
 
 export default function Home() {
     return (
@@ -29,33 +29,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className={styles.heroNavContainer}>
-                    <div className={styles.heroNavLine}>
-                        <div className={styles.heroNavLineActive}></div>
-                    </div>
-                    <div className={styles.heroNav}>
-                        <a href="/services/advanced-aesthetics" className={styles.heroNavItem}>
-                            <Sparkles className={styles.heroNavIcon} strokeWidth={1} />
-                            <span>ADVANCED<br />AESTHETICS</span>
-                        </a>
-                        <a href="/services/longevity-metabolic-wellness" className={styles.heroNavItem}>
-                            <Activity className={styles.heroNavIcon} strokeWidth={1} />
-                            <span>LONGEVITY &<br />METABOLIC</span>
-                        </a>
-                        <a href="/services/recovery-performance" className={styles.heroNavItem}>
-                            <BatteryCharging className={styles.heroNavIcon} strokeWidth={1} />
-                            <span>RECOVERY &<br />PERFORMANCE</span>
-                        </a>
-                        <a href="/services/body-contouring" className={styles.heroNavItem}>
-                            <Dumbbell className={styles.heroNavIcon} strokeWidth={1} />
-                            <span>BODY<br />CONTOURING</span>
-                        </a>
-                        <a href="/membership" className={styles.heroNavItem}>
-                            <Crown className={styles.heroNavIcon} strokeWidth={1} />
-                            <span>ADARE<br />MEMBERSHIPS</span>
-                        </a>
-                    </div>
-                </div>
+                <HeroNav />
             </section>
 
             {/* Services Preview Grid */}
