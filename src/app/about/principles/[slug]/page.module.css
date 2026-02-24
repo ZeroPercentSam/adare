@@ -159,3 +159,11 @@
     justify-content: center;
     flex-wrap: wrap;
 }
+
+/* Global Centering for Hero Content */
+.heroContent .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
