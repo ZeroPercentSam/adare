@@ -65,6 +65,7 @@ export const servicesData: ServiceCategory[] = [
                     'Precise, comfortable injection plan using ultra-fine needles',
                     'Comprehensive aftercare guidance and 2-week follow-up assessment'
                 ],
+                imageSrc: '/images/services/neurotoxins.jpg',
                 resultsAndTiming: 'You will begin to feel an initial softening in 3–5 days. The full, settled result appears at 10–14 days. Maintenance is typically required every 3–4 months depending on individual metabolic rates.',
                 pairWith: [
                     { name: 'Dermal Fillers', slug: 'dermal-fillers', categorySlug: 'advanced-aesthetics' },
