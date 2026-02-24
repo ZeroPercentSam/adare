@@ -307,6 +307,7 @@ export const servicesData: ServiceCategory[] = [
                     'Creation of a custom peptide protocol, often involving a simple nightly subcutaneous injection or oral capsule',
                     'Strategic guidance on "cycling" (e.g., 5 days on, 2 days off) to prevent cellular receptor downregulation'
                 ],
+                imageSrc: '/images/services/peptide-therapy.jpg',
                 resultsAndTiming: 'Some benefits, such as deeper sleep, can be felt within days. Deep tissue repair, metabolic changes, and aesthetic improvements run in 1 to 3-month cycles, with compounding systemic benefits over time.',
                 pairWith: [
                     { name: 'NAD+ Therapy', slug: 'nad-therapy', categorySlug: 'longevity-metabolic-wellness' },
