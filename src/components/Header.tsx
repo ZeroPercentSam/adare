@@ -10,6 +10,8 @@ export default function Header() {
     const [isServicesOpen, setIsServicesOpen] = useState(false);
     const [isMembershipOpen, setIsMembershipOpen] = useState(false);
 
+    const [isAboutOpen, setIsAboutOpen] = useState(false);
+
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 20);
@@ -40,21 +42,27 @@ export default function Header() {
                     <div className={styles.desktopMenu}>
                         <button
                             className={styles.menuItem}
-                            onClick={() => { setIsServicesOpen(true); setIsMembershipOpen(false); }}
+                            onClick={() => { setIsServicesOpen(true); setIsMembershipOpen(false); setIsAboutOpen(false); }}
                             aria-expanded={isServicesOpen}
                         >
                             Services
                         </button>
                         <button
                             className={styles.menuItem}
-                            onClick={() => { setIsMembershipOpen(true); setIsServicesOpen(false); }}
+                            onClick={() => { setIsMembershipOpen(true); setIsServicesOpen(false); setIsAboutOpen(false); }}
                             aria-expanded={isMembershipOpen}
                         >
                             Membership
                         </button>
                         <Link href="/for-men" className={styles.menuItem}>For Men</Link>
                         <Link href="/for-women" className={styles.menuItem}>For Women</Link>
-                        <Link href="/about" className={styles.menuItem}>About</Link>
+                        <button
+                            className={styles.menuItem}
+                            onClick={() => { setIsAboutOpen(true); setIsServicesOpen(false); setIsMembershipOpen(false); }}
+                            aria-expanded={isAboutOpen}
+                        >
+                            About
+                        </button>
                         <Link href="/locations" className={styles.menuItem}>Locations</Link>
                     </div>
 
@@ -175,6 +183,50 @@ export default function Header() {
                 </div>
             </div>
 
+            {/* About Mega Menu Overlay */}
+            <div className={`${styles.megaMenu} ${isAboutOpen ? styles.megaMenuOpen : ''}`}>
+                <div className={styles.megaMenuHeader}>
+                    <h2>ABOUT ADARE</h2>
+                    <button
+                        className={styles.closeButton}
+                        onClick={() => setIsAboutOpen(false)}
+                        aria-label="Close about menu"
+                    >
+                        ✕
+                    </button>
+                </div>
+
+                <div className={styles.megaMenuContent}>
+                    <div className={styles.category}>
+                        <Link href="/about" onClick={() => setIsAboutOpen(false)}>
+                            <h3>Our Philosophy</h3>
+                        </Link>
+                        <ul>
+                            <li><Link href="/about" onClick={() => setIsAboutOpen(false)}>The Clinic</Link></li>
+                        </ul>
+                    </div>
+
+                    <div className={styles.category}>
+                        <Link href="/about" onClick={() => setIsAboutOpen(false)}>
+                            <h3>Core Principles</h3>
+                        </Link>
+                        <ul>
+                            <li><Link href="/about/principles/provider-led-care" onClick={() => setIsAboutOpen(false)}>Provider-Led Care</Link></li>
+                            <li><Link href="/about/principles/lab-first-decision-making" onClick={() => setIsAboutOpen(false)}>Lab-First Decisions</Link></li>
+                            <li><Link href="/about/principles/personalized-protocols" onClick={() => setIsAboutOpen(false)}>Personalized Protocols</Link></li>
+                            <li><Link href="/about/principles/high-touch-experience" onClick={() => setIsAboutOpen(false)}>High-Touch Experience</Link></li>
+                            <li><Link href="/about/principles/ongoing-optimization" onClick={() => setIsAboutOpen(false)}>Ongoing Optimization</Link></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div className={styles.megaMenuFooter}>
+                    <Link href="/about" className={styles.bookButtonLarge} onClick={() => setIsAboutOpen(false)}>
+                        Learn About Our Providers
+                    </Link>
+                </div>
+            </div>
+
             {/* Mobile Menu Slide-in */}
             <div className={`${styles.mobileMenu} ${isMobileMenuOpen ? styles.mobileMenuOpen : ''}`}>
                 <div className={styles.mobileMenuLinks}>
@@ -184,6 +236,7 @@ export default function Header() {
                             setIsMobileMenuOpen(false);
                             setIsServicesOpen(true);
                             setIsMembershipOpen(false);
+                            setIsAboutOpen(false);
                         }}
                     >
                         Services
@@ -194,13 +247,24 @@ export default function Header() {
                             setIsMobileMenuOpen(false);
                             setIsMembershipOpen(true);
                             setIsServicesOpen(false);
+                            setIsAboutOpen(false);
                         }}
                     >
                         Membership
                     </button>
                     <Link href="/for-men" className={styles.mobileMenuItem} onClick={() => setIsMobileMenuOpen(false)}>For Men</Link>
                     <Link href="/for-women" className={styles.mobileMenuItem} onClick={() => setIsMobileMenuOpen(false)}>For Women</Link>
-                    <Link href="/about" className={styles.mobileMenuItem} onClick={() => setIsMobileMenuOpen(false)}>About</Link>
+                    <button
+                        className={styles.mobileMenuItem}
+                        onClick={() => {
+                            setIsMobileMenuOpen(false);
+                            setIsAboutOpen(true);
+                            setIsMembershipOpen(false);
+                            setIsServicesOpen(false);
+                        }}
+                    >
+                        About
+                    </button>
                     <Link href="/locations" className={styles.mobileMenuItem} onClick={() => setIsMobileMenuOpen(false)}>Locations</Link>
                 </div>
             </div>

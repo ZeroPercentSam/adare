@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './page.module.css';
 import Button from '@/components/Button';
 import ServiceCard from '@/components/ServiceCard';
@@ -82,26 +83,31 @@ export default function Home() {
                     <div className={styles.differenceContent}>
                         <h2>Medical. Intentional.<br />Evidence-Based.</h2>
                         <div className={styles.differencePoints}>
-                            <div className={styles.point}>
+                            <Link href="/about/principles/provider-led-care" className={styles.point}>
                                 <span className={styles.pointIcon}>+</span>
                                 <span className={styles.pointText}>Provider-led care</span>
-                            </div>
-                            <div className={styles.point}>
+                                <span className={styles.pointArrow}>→</span>
+                            </Link>
+                            <Link href="/about/principles/lab-first-decision-making" className={styles.point}>
                                 <span className={styles.pointIcon}>+</span>
                                 <span className={styles.pointText}>Lab-first decision making</span>
-                            </div>
-                            <div className={styles.point}>
+                                <span className={styles.pointArrow}>→</span>
+                            </Link>
+                            <Link href="/about/principles/personalized-protocols" className={styles.point}>
                                 <span className={styles.pointIcon}>+</span>
                                 <span className={styles.pointText}>Personalized protocols</span>
-                            </div>
-                            <div className={styles.point}>
+                                <span className={styles.pointArrow}>→</span>
+                            </Link>
+                            <Link href="/about/principles/high-touch-experience" className={styles.point}>
                                 <span className={styles.pointIcon}>+</span>
                                 <span className={styles.pointText}>High-touch experience</span>
-                            </div>
-                            <div className={styles.point}>
+                                <span className={styles.pointArrow}>→</span>
+                            </Link>
+                            <Link href="/about/principles/ongoing-optimization" className={styles.point}>
                                 <span className={styles.pointIcon}>+</span>
                                 <span className={styles.pointText}>Ongoing optimization, not one-time treatments</span>
-                            </div>
+                                <span className={styles.pointArrow}>→</span>
+                            </Link>
                         </div>
                     </div>
                 </div>

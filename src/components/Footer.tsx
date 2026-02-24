@@ -42,6 +42,13 @@ export default function Footer() {
 
                         <div className={styles.column}>
                             <h4><Link href="/about">About</Link></h4>
+                            <ul>
+                                <li><Link href="/about/principles/provider-led-care">Provider-Led Care</Link></li>
+                                <li><Link href="/about/principles/lab-first-decision-making">Lab-First Decisions</Link></li>
+                                <li><Link href="/about/principles/personalized-protocols">Personalized Protocols</Link></li>
+                                <li><Link href="/about/principles/high-touch-experience">High-Touch Experience</Link></li>
+                                <li><Link href="/about/principles/ongoing-optimization">Ongoing Optimization</Link></li>
+                            </ul>
                         </div>
                     </div>
                 </div>

@@ -154,12 +154,37 @@
     font-family: var(--font-sans);
     font-size: clamp(16px, 2vw, 20px);
     font-weight: 500;
+    text-decoration: none;
+    color: var(--color-body-text);
     transition: transform var(--transition-normal), color var(--transition-fast);
+}
+
+.pointIcon {
+    margin-right: var(--spacing-4);
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.pointText {
+    flex-grow: 1;
+    /* Pushes arrow to right side */
+}
+
+.pointArrow {
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: opacity var(--transition-normal), transform var(--transition-normal);
 }
 
 .point:hover {
     transform: translateX(10px);
-    color: var(--color-muted-text);
+    color: var(--color-primary);
+    /* Use primary color on hover for emphasis */
+}
+
+.point:hover .pointArrow {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .point:first-child {
