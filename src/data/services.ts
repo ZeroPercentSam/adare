@@ -94,6 +94,7 @@ export const servicesData: ServiceCategory[] = [
                     'Topical numbing and precise injection utilizing both needles and micro-cannulas for safety',
                     'Post-treatment shaping, aftercare instructions, and integration checks'
                 ],
+                imageSrc: '/images/services/dermal-fillers.jpg',
                 resultsAndTiming: 'Volume restoration is immediate. Swelling may take 1–2 weeks to fully resolve, at which point the filler integrates seamlessly with your tissue for a beautifully natural result.',
                 pairWith: [
                     { name: 'Neurotoxins', slug: 'neurotoxins', categorySlug: 'advanced-aesthetics' },
