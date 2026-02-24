@@ -10,7 +10,6 @@
     display: flex;
     align-items: center;
     overflow: hidden;
-    margin-top: calc(-1 * var(--nav-height));
 }
 
 .heroImageContainer {
@@ -36,7 +35,6 @@
     z-index: 2;
     width: 100%;
     color: var(--color-primary-inverse);
-    padding-top: var(--nav-height);
 }
 
 .heroLabel {
