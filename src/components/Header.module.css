@@ -82,6 +82,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 6px;
     width: 32px;
     height: 32px;
@@ -97,19 +98,19 @@
 }
 
 .line {
-    width: 100%;
+    width: 24px;
     height: 2px;
     background-color: var(--color-primary);
     transition: transform var(--transition-normal), opacity var(--transition-normal);
-    transform-origin: left center;
+    transform-origin: center;
 }
 
 .lineOpen1 {
-    transform: rotate(45deg);
+    transform: translateY(4px) rotate(45deg);
 }
 
 .lineOpen2 {
-    transform: rotate(-45deg);
+    transform: translateY(-4px) rotate(-45deg);
 }
 
 /* Mobile Menu */
