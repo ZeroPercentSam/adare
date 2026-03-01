@@ -26,24 +26,11 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: none;
-}
-
-.heroStaticImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     display: block;
 }
 
-@media (min-width: 768px) {
-    .heroVideo {
-        display: block;
-    }
-
-    .heroStaticImage {
-        display: none;
-    }
+.heroStaticImage {
+    display: none;
 }
 
 @keyframes slowZoom {
