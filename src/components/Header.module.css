@@ -1,12 +1,24 @@
 .nav {
     width: 100%;
     padding: var(--spacing-4) var(--spacing-4);
-    background-color: var(--color-background);
-    border-bottom: 1px solid var(--color-divider);
-    color: var(--color-primary);
-    position: relative;
+    background-color: transparent;
+    color: var(--color-primary-inverse);
+    position: absolute;
+    top: 0;
+    left: 0;
     /* ensure it stays above the hero section underneath it */
     z-index: 100;
+    transition: background-color 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navScrolled {
+    position: fixed;
+    background-color: rgba(18, 18, 18, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: var(--spacing-3) var(--spacing-4);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .navContainer {
@@ -60,21 +72,48 @@
 }
 
 .bookButton {
-    background-color: var(--color-primary);
-    color: var(--color-primary-inverse);
+    background-color: var(--color-accent);
+    color: var(--color-primary);
     padding: var(--spacing-2) var(--spacing-6);
     border-radius: 0;
     font-weight: 600;
     font-size: 14px;
-    transition: background-color var(--transition-fast), transform var(--transition-fast);
+    transition: all var(--transition-fast);
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .bookButton {
+        display: inline-block;
+    }
 }
 
 .bookButton:hover {
-    background-color: var(--color-muted-text);
+    background-color: #fcebc0;
+    transform: translateY(-2px);
 }
 
 .bookButton:active {
-    transform: scale(0.98);
+    transform: translateY(0);
+}
+
+.phoneLink {
+    display: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.phoneLink:hover {
+    color: var(--color-accent);
+}
+
+@media (min-width: 1024px) {
+    .phoneLink {
+        display: inline-block;
+    }
 }
 
 /* Hamburger */
@@ -100,7 +139,7 @@
 .line {
     width: 24px;
     height: 2px;
-    background-color: var(--color-primary);
+    background-color: currentColor;
     transition: transform var(--transition-normal), opacity var(--transition-normal);
     transform-origin: center;
 }
@@ -120,13 +159,15 @@
     right: -100%;
     width: 100%;
     height: 100vh;
-    background-color: var(--color-background);
-    z-index: 40;
+    background-color: rgba(18, 18, 18, 0.98);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    z-index: 90;
     transition: right var(--transition-normal);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: var(--spacing-8);
+    justify-content: flex-start;
+    padding: 100px var(--spacing-8) var(--spacing-8);
 }
 
 .mobileMenuOpen {
@@ -149,6 +190,39 @@
     text-align: right;
     width: 100%;
     cursor: pointer;
+    color: var(--color-primary-inverse);
+    transition: color 0.2s;
+}
+
+.mobileMenuItem:hover {
+    color: var(--color-accent);
+}
+
+.mobileMenuFooter {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+    text-align: center;
+}
+
+.mobilePhoneLink {
+    color: var(--color-primary-inverse);
+    font-size: 1.25rem;
+    text-decoration: none;
+    padding: var(--spacing-4);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobileBookBtn {
+    background: var(--color-accent);
+    color: var(--color-primary);
+    padding: var(--spacing-4);
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.125rem;
+    border-radius: var(--radius-sm);
 }
 
 /* Services Mega Menu */
@@ -227,6 +301,17 @@
     margin-bottom: var(--spacing-4);
     border-bottom: 1px solid var(--color-divider);
     padding-bottom: var(--spacing-2);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-3);
+    color: var(--color-primary);
+}
+
+.category h3 img {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-sm);
+    object-fit: cover;
 }
 
 .category ul {

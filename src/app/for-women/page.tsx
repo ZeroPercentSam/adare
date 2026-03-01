@@ -100,9 +100,9 @@ export default function ForWomenPage() {
                 </div>
                 <div className={styles.heroContent}>
                     <div className="container">
-                        <span className={styles.heroLabel}>Demographics</span>
-                        <h1 className={styles.heroTitle}>For Women</h1>
-                        <p className={styles.heroTagline}>Protocols designed for female optimization.</p>
+                        <span className={styles.heroLabel}>Female Optimization</span>
+                        <h1 className={styles.heroTitle} style={{ fontSize: 'clamp(40px, 5vw, 64px)' }}>Beauty That Reflects How You Feel Inside</h1>
+                        <p className={styles.heroTagline}>Precision aesthetics, hormone harmonization, and longevity medicine tailored for women.</p>
                     </div>
                 </div>
             </section>
@@ -156,12 +156,64 @@ export default function ForWomenPage() {
                             </div>
                         ))}
                     </div>
+                </div>
+            </section>
 
-                    <div className="text-center" style={{ marginTop: 'var(--spacing-24)' }}>
-                        <Button href="/book?type=consultation" variant="primary">
-                            Request Female Optimization Consultation
-                        </Button>
+            {/* The ADARE Protocol for Women */}
+            <section className={styles.lightSection} style={{ backgroundColor: '#111', color: '#fff' }}>
+                <div className="container">
+                    <h2 className="text-center" style={{ marginBottom: 'var(--spacing-16)', color: 'var(--color-primary-inverse)' }}>The ADARE Protocol for Women</h2>
+                    <div className={styles.protocolJourney}>
+                        <div className={styles.journeyStep}>
+                            <div className={styles.stepNumber}>01</div>
+                            <h4>Clinical Assessment</h4>
+                            <p>Advanced hormone mapping, skin quality analysis, and metabolic evaluation to understand your unique baseline.</p>
+                        </div>
+                        <div className={styles.journeyStep}>
+                            <div className={styles.stepNumber}>02</div>
+                            <h4>Integrated Design</h4>
+                            <p>Our experts build a cohesive plan combining precise structural aesthetics with systemic hormone and metabolic support.</p>
+                        </div>
+                        <div className={styles.journeyStep}>
+                            <div className={styles.stepNumber}>03</div>
+                            <h4>Harmonization</h4>
+                            <p>Execute the protocol to stabilize energy, restore natural volume, and optimize cellular health.</p>
+                        </div>
+                        <div className={styles.journeyStep}>
+                            <div className={styles.stepNumber}>04</div>
+                            <h4>Refinement</h4>
+                            <p>Ongoing micro-adjustments to bio-identical hormones and aesthetic maintenance to ensure enduring, ageless results.</p>
+                        </div>
                     </div>
+                </div>
+            </section>
+
+            {/* Female Testimonials (Placeholder) */}
+            <section className={styles.lightSection} style={{ backgroundColor: '#fafafa' }}>
+                <div className="container text-center">
+                    <h2 style={{ marginBottom: 'var(--spacing-12)' }}>Patient Outcomes</h2>
+                    <div className={styles.threeColGrid}>
+                        <div className={styles.testimonialCard}>
+                            <p className={styles.quote}>"The BHRT protocol gave me my life back. The fatigue and brain fog of perimenopause were crushing my ability to run my agency. I feel like myself again."</p>
+                            <p className={styles.author}>— Sarah K., 46, Founder</p>
+                        </div>
+                        <div className={styles.testimonialCard}>
+                            <p className={styles.quote}>"I was terrified of looking 'over-filled.' ADARE's approach to bio-stimulators and structural refinement is true artistry. It's the best my skin has looked in a decade."</p>
+                            <p className={styles.author}>— Elena M., 52, Executive</p>
+                        </div>
+                        <div className={styles.testimonialCard}>
+                            <p className={styles.quote}>"Medical weight loss combined with Emsculpt NEO was the exact breakthrough I needed post-partum. The clinical oversight is what makes ADARE completely different."</p>
+                            <p className={styles.author}>— Jessica T., 38, Mother of Two</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className={styles.ctaSection}>
+                <div className="container text-center">
+                    <Button href="/book?type=consultation" variant="primary">
+                        Request Female Optimization Consultation
+                    </Button>
                 </div>
             </section>
         </main>

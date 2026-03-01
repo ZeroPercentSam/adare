@@ -1,0 +1,177 @@
+/* Corporate Wellness CSS */
+
+.hero {
+    position: relative;
+    height: 70vh;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.heroBackground {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.heroImage {
+    object-fit: cover;
+    transform: scale(1.05);
+}
+
+.heroOverlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.1) 100%);
+    z-index: 2;
+}
+
+.heroContent {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    color: var(--color-primary-inverse);
+}
+
+.heroContent :global(.container) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.heroLabel {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: var(--spacing-4);
+    opacity: 0.8;
+}
+
+.heroTitle {
+    color: var(--color-primary-inverse);
+    margin-bottom: var(--spacing-4);
+    max-width: 800px;
+    font-size: clamp(40px, 6vw, 72px);
+    line-height: 1.1;
+}
+
+.heroTagline {
+    font-size: clamp(18px, 2.5vw, 24px);
+    max-width: 600px;
+    font-weight: 400;
+}
+
+.introSection {
+    padding: var(--spacing-24) 0 var(--spacing-16);
+    background-color: var(--color-background);
+}
+
+.roiSection {
+    padding: var(--spacing-16) 0 var(--spacing-24);
+    background-color: var(--color-background);
+}
+
+.roiGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-8);
+}
+
+@media (min-width: 768px) {
+    .roiGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.roiCard {
+    background-color: #fafafa;
+    border: 1px solid var(--color-divider);
+    padding: var(--spacing-10);
+    text-align: center;
+}
+
+.roiStat {
+    font-family: var(--font-serif);
+    font-size: 4rem;
+    color: var(--color-accent);
+    line-height: 1;
+    margin-bottom: var(--spacing-4);
+}
+
+.roiCard h3 {
+    margin-bottom: var(--spacing-4);
+    font-size: 1.2rem;
+}
+
+.roiCard p {
+    color: var(--color-muted-text);
+    font-size: 0.95rem;
+}
+
+.darkSection {
+    background-color: #111;
+    color: var(--color-primary-inverse);
+    padding: var(--spacing-24) 0;
+}
+
+.protocolGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-12);
+    align-items: center;
+}
+
+@media (min-width: 1024px) {
+    .protocolGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.protocolList {
+    list-style: none;
+    padding: 0;
+    margin-top: var(--spacing-8);
+}
+
+.protocolList li {
+    position: relative;
+    padding-left: var(--spacing-8);
+    margin-bottom: var(--spacing-6);
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.protocolList li strong {
+    color: var(--color-primary-inverse);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.protocolList li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 6px;
+    height: 6px;
+    background-color: var(--color-accent);
+    border-radius: 50%;
+}
+
+.protocolImageWrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 120%;
+}
+
+.protocolImage {
+    object-fit: cover;
+}
+
+.retreatSection {
+    padding: var(--spacing-32) 0;
+    background-color: #f7f6f5;
+}

@@ -1,10 +1,12 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
+import Script from 'next/script';
 import Link from 'next/link';
 import { getServiceCategory, getServiceDetail, servicesData } from '@/data/services';
 import Button from '@/components/Button';
 import Accordion from '@/components/Accordion';
 import ServiceCard from '@/components/ServiceCard';
+import BeforeAfterGallery from '@/components/BeforeAfterGallery';
 import styles from './page.module.css';
 
 interface ServicePageProps {
@@ -53,6 +55,20 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
     return (
         <>
+            <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": serviceData.faqs.map(faq => ({
+                        "@type": "Question",
+                        "name": faq.question,
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": faq.answer
+                        }
+                    }))
+                })
+            }} />
             <section className={styles.hero}>
                 <div className={styles.heroBackground}>
                     <Image
@@ -163,6 +179,9 @@ export default async function ServicePage({ params }: ServicePageProps) {
                     </div>
                 </div>
             </section>
+
+            {/* Before & After Gallery */}
+            <BeforeAfterGallery />
 
             {/* Pair With Section */}
             <section className={styles.pairWithSection}>

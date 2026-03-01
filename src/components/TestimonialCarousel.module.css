@@ -1,0 +1,112 @@
+.sectionTestimonials {
+    padding: var(--spacing-16) 0;
+    background-color: var(--color-background);
+}
+
+@media (min-width: 1024px) {
+    .sectionTestimonials {
+        padding: var(--spacing-24) 0;
+    }
+}
+
+.header {
+    text-align: center;
+    margin-bottom: var(--spacing-12);
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.testimonialContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 var(--spacing-8);
+    flex-grow: 1;
+}
+
+.stars {
+    color: var(--color-accent-warm);
+    letter-spacing: 2px;
+    font-size: var(--text-lg);
+    margin-bottom: var(--spacing-6);
+}
+
+.quote {
+    font-family: var(--font-serif);
+    font-size: var(--text-2xl);
+    line-height: 1.4;
+    color: var(--color-body-text);
+    margin-bottom: var(--spacing-8);
+    font-style: italic;
+}
+
+@media (min-width: 768px) {
+    .quote {
+        font-size: var(--text-3xl);
+    }
+}
+
+.authorInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-1);
+}
+
+.name {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.treatment {
+    font-size: var(--text-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-muted-text);
+    font-weight: 500;
+}
+
+.navButton {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--color-muted-text);
+    cursor: pointer;
+    padding: var(--spacing-2);
+    transition: color var(--transition-fast);
+}
+
+.navButton:hover {
+    color: var(--color-primary);
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-3);
+    margin-top: var(--spacing-10);
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--color-divider);
+    border: none;
+    cursor: pointer;
+    transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.activeDot {
+    background-color: var(--color-primary);
+    transform: scale(1.2);
+}

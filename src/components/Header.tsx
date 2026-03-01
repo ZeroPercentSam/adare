@@ -18,13 +18,28 @@ export default function Header() {
                 setIsMobileMenuOpen(false);
             }
         };
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
         window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
+        window.addEventListener('scroll', handleScroll);
+
+        // Initial check
+        handleScroll();
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+            window.removeEventListener('scroll', handleScroll);
+        };
     }, []);
 
     return (
         <>
-            <nav className={styles.nav}>
+            <nav className={`${styles.nav} ${isScrolled ? styles.navScrolled : ''}`}>
                 <div className={styles.navContainer}>
                     <Link href="/" className={styles.logo}>
                         ADARE
@@ -58,6 +73,9 @@ export default function Header() {
                     </div>
 
                     <div className={styles.actions}>
+                        <a href="tel:8135550100" className={styles.phoneLink}>
+                            (813) 555-0100
+                        </a>
                         <Link href="/book" className={styles.bookButton}>
                             Book Now
                         </Link>
@@ -89,7 +107,10 @@ export default function Header() {
                 <div className={styles.megaMenuContent}>
                     <div className={styles.category}>
                         <Link href="/services/advanced-aesthetics" onClick={() => setIsServicesOpen(false)}>
-                            <h3>Advanced Aesthetics</h3>
+                            <h3>
+                                <img src="/images/aesthetics-hero-new.jpg" alt="Aesthetics" />
+                                Advanced Aesthetics
+                            </h3>
                         </Link>
                         <ul>
                             <li><Link href="/services/advanced-aesthetics/neurotoxins" onClick={() => setIsServicesOpen(false)}>Neurotoxins</Link></li>
@@ -103,7 +124,10 @@ export default function Header() {
 
                     <div className={styles.category}>
                         <Link href="/services/longevity-metabolic-wellness" onClick={() => setIsServicesOpen(false)}>
-                            <h3>Longevity & Metabolic Wellness</h3>
+                            <h3>
+                                <img src="/images/longevity-hero-new.jpg" alt="Wellness" />
+                                Longevity & Metabolic Wellness
+                            </h3>
                         </Link>
                         <ul>
                             <li><Link href="/services/longevity-metabolic-wellness/hormone-optimization" onClick={() => setIsServicesOpen(false)}>Hormone Optimization</Link></li>
@@ -115,7 +139,10 @@ export default function Header() {
 
                     <div className={styles.category}>
                         <Link href="/services/body-contouring" onClick={() => setIsServicesOpen(false)}>
-                            <h3>Body Contouring</h3>
+                            <h3>
+                                <img src="/images/body-hero-new.jpg" alt="Body" />
+                                Body Contouring
+                            </h3>
                         </Link>
                         <ul>
                             <li><Link href="/services/body-contouring/emsculpt-neo" onClick={() => setIsServicesOpen(false)}>Emsculpt NEO</Link></li>
@@ -124,7 +151,10 @@ export default function Header() {
 
                     <div className={styles.category}>
                         <Link href="/services/recovery-performance" onClick={() => setIsServicesOpen(false)}>
-                            <h3>Recovery & Performance</h3>
+                            <h3>
+                                <img src="/images/recovery-hero-new.jpg" alt="Recovery" />
+                                Recovery & Performance
+                            </h3>
                         </Link>
                         <ul>
                             <li><Link href="/services/recovery-performance/iv-therapy" onClick={() => setIsServicesOpen(false)}>IV Therapy</Link></li>
@@ -257,6 +287,15 @@ export default function Header() {
                         About
                     </button>
                     <Link href="/locations" className={styles.mobileMenuItem} onClick={() => setIsMobileMenuOpen(false)}>Locations</Link>
+                </div>
+                {/* Mobile Bottom Navigation */}
+                <div className={styles.mobileMenuFooter}>
+                    <a href="tel:8135550100" className={styles.mobilePhoneLink}>
+                        (813) 555-0100
+                    </a>
+                    <Link href="/book" className={styles.mobileBookBtn} onClick={() => setIsMobileMenuOpen(false)}>
+                        Book Now
+                    </Link>
                 </div>
             </div>
         </>

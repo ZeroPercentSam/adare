@@ -227,3 +227,55 @@
     align-items: center;
     text-align: center;
 }
+
+/* Comparison Table */
+.comparisonSection {
+    padding: var(--spacing-24) 0;
+    background-color: var(--color-background);
+}
+
+.tableWrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: var(--spacing-12);
+}
+
+.compareTable {
+    width: 100%;
+    min-width: 800px;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.compareTable th,
+.compareTable td {
+    padding: var(--spacing-6);
+    text-align: left;
+    border-bottom: 1px solid var(--color-divider);
+}
+
+.compareTable th {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--color-primary);
+    background-color: var(--color-background);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    position: sticky;
+    top: 0;
+}
+
+.compareTable td {
+    color: var(--color-muted-text);
+}
+
+.compareTable tr:hover td {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.checkIcon {
+    color: var(--color-accent-warm);
+    font-weight: bold;
+    font-size: 1.2rem;
+}

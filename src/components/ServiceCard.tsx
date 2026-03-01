@@ -11,6 +11,7 @@ interface ServiceCardProps {
     imageSrc: string;
     categoryLink: string;
     bookingLink: string;
+    isPopular?: boolean;
     delay?: number;
 }
 
@@ -20,6 +21,7 @@ export default function ServiceCard({
     imageSrc,
     categoryLink,
     bookingLink,
+    isPopular = false,
     delay = 0,
 }: ServiceCardProps) {
     const { isVisible, domRef } = useScrollReveal();
@@ -31,6 +33,7 @@ export default function ServiceCard({
             style={{ transitionDelay: `${delay}s` }}
         >
             <div className={styles.card}>
+                {isPopular && <div className={styles.popularBadge}>Most Requested</div>}
                 <div className={styles.imageContainer}>
                     <Image
                         src={imageSrc}

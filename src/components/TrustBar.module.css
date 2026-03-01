@@ -1,0 +1,68 @@
+.trustBar {
+    background-color: var(--color-background);
+    padding: var(--spacing-4) 0;
+    border-bottom: 1px solid var(--color-divider);
+    border-top: 1px solid var(--color-divider);
+}
+
+.trustContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-4);
+}
+
+@media (min-width: 768px) {
+    .trustContent {
+        flex-direction: row;
+        gap: var(--spacing-8);
+    }
+}
+
+.reviews {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+}
+
+.stars {
+    color: var(--color-accent-warm);
+    letter-spacing: 2px;
+}
+
+.reviewText {
+    font-size: var(--text-sm);
+    color: var(--color-muted-text);
+    font-family: var(--font-sans);
+    font-weight: 500;
+}
+
+.divider {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .divider {
+        display: block;
+        width: 1px;
+        height: 24px;
+        background-color: var(--color-divider);
+    }
+}
+
+.affiliations {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-6);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.affiliationText {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-muted-text);
+    font-weight: 600;
+}

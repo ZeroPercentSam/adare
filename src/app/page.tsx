@@ -5,6 +5,11 @@ import Button from '@/components/Button';
 import ServiceCard from '@/components/ServiceCard';
 import HeroNav from '@/components/HeroNav';
 import SplitLocations from '@/components/SplitLocations';
+import TrustBar from '@/components/TrustBar';
+import ProviderSection from '@/components/ProviderSection';
+import TestimonialCarousel from '@/components/TestimonialCarousel';
+import PressBar from '@/components/PressBar';
+import StatsCounter from '@/components/StatsCounter';
 
 export default function Home() {
     return (
@@ -12,8 +17,18 @@ export default function Home() {
             {/* Hero Module */}
             <section className={styles.hero}>
                 <div className={styles.heroBackground}>
+                    {/* Mobile Fallback Image */}
+                    <Image
+                        src="/images/hero-poster.jpg"
+                        alt="ADARE Longevity & Aesthetics"
+                        fill
+                        priority
+                        className={styles.heroStaticImage}
+                    />
+                    {/* Desktop Video */}
                     <video
                         src="/videos/home-hero.mp4"
+                        poster="/images/hero-poster.jpg"
                         autoPlay
                         loop
                         muted
@@ -26,19 +41,34 @@ export default function Home() {
                     <div className="container">
                         <span className={styles.heroLabel}>Tampa Bay's Premier Clinic</span>
                         <h1 className={styles.heroTitle}>For Those Who Expect More.</h1>
-                        <p className={styles.heroTagline}>Longevity, aesthetics, and cellular medicine delivered with clinical integrity and elevated design.</p>
+                        <p className={styles.heroTagline}>Precision longevity medicine, advanced aesthetics, and cellular optimization — exclusively for Tampa Bay's most discerning patients.</p>
                         <div className={styles.heroActions}>
-                            <Button href="/services" variant="outline" className={styles.heroButton}>Explore Services</Button>
+                            <Button href="/assessment" variant="outline" className={styles.heroButton}>See If You Qualify</Button>
                             <Button href="/book" variant="primary">Book Now</Button>
                         </div>
                     </div>
                 </div>
 
+                <div className={styles.scrollIndicator}>
+                    <span>Explore</span>
+                    <svg className={styles.scrollIcon} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+
                 <HeroNav />
             </section>
 
+            {/* Trust Signals */}
+            <TrustBar />
+            <PressBar />
+
             {/* Services Preview Grid */}
             <section className={styles.sectionServices}>
+                <div className={styles.marqueeContainer}>
+                    <div className={styles.marqueeText}>
+                        Botox &middot; Semaglutide &middot; NAD+ IV &middot; Hormone Optimization &middot; Emsculpt NEO &middot; Peptide Therapy &middot; Microneedling &middot; Red Light Therapy &middot;
+                        Botox &middot; Semaglutide &middot; NAD+ IV &middot; Hormone Optimization &middot; Emsculpt NEO &middot; Peptide Therapy &middot; Microneedling &middot; Red Light Therapy &middot;
+                    </div>
+                </div>
                 <div className="container">
                     <div className={styles.sectionHeader}>
                         <h2>Explore Care</h2>
@@ -46,23 +76,25 @@ export default function Home() {
                     <div className={styles.servicesGrid}>
                         <ServiceCard
                             title="Advanced Aesthetics"
-                            description="Precision injectables and regenerative skin treatments designed for natural refinement."
+                            description="Refine your profile and reverse the signs of aging with precision injectables and regenerative skin treatments."
                             imageSrc="/images/aesthetics-hero-new.jpg"
                             categoryLink="/services/advanced-aesthetics"
                             bookingLink="/book"
+                            isPopular={true}
                             delay={0}
                         />
                         <ServiceCard
-                            title="Longevity & Metabolic Wellness"
-                            description="Lab-guided hormone, weight loss, peptide, and NAD+ programs built for performance."
+                            title="Longevity & Wellness"
+                            description="Reclaim the energy, focus, and vitality that time has taken — guided by labs, not guesswork."
                             imageSrc="/images/longevity-hero-new.jpg"
                             categoryLink="/services/longevity-metabolic-wellness"
                             bookingLink="/book"
+                            isPopular={true}
                             delay={0.1}
                         />
                         <ServiceCard
                             title="Recovery & Performance"
-                            description="Hyperbaric oxygen, red light, and IV therapy to accelerate recovery and resilience."
+                            description="Slash recovery times and build profound cellular resilience with hyperbaric, red light, and IV therapies."
                             imageSrc="/images/recovery-hero-new.jpg"
                             categoryLink="/services/recovery-performance"
                             bookingLink="/book"
@@ -70,7 +102,7 @@ export default function Home() {
                         />
                         <ServiceCard
                             title="Body Contouring"
-                            description="Emsculpt NEO for muscle and fat outcomes with measurable change."
+                            description="Achieve measurable muscle growth and fat reduction without downtime using Emsculpt NEO."
                             imageSrc="/images/body-hero-new.jpg"
                             categoryLink="/services/body-contouring"
                             bookingLink="/book"
@@ -79,6 +111,9 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+
+            {/* Provider Section */}
+            <ProviderSection />
 
             {/* The ADARE Difference */}
             <section className={styles.sectionDifference}>
@@ -115,6 +150,12 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+
+            {/* Stats Counter */}
+            <StatsCounter />
+
+            {/* Testimonials */}
+            <TestimonialCarousel />
 
             {/* Membership CTA */}
             <section className={styles.sectionMembership}>

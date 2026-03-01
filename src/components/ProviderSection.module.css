@@ -1,0 +1,110 @@
+.sectionProvider {
+    padding: var(--spacing-16) 0;
+    background-color: var(--color-primary);
+    /* Dark bg for contrast */
+    color: var(--color-primary-inverse);
+}
+
+@media (min-width: 1024px) {
+    .sectionProvider {
+        padding: var(--spacing-24) 0;
+    }
+}
+
+.header {
+    text-align: center;
+    margin-bottom: var(--spacing-12);
+}
+
+.title {
+    color: var(--color-primary-inverse);
+    margin-bottom: var(--spacing-4);
+}
+
+.subtitle {
+    color: #A0A0A0;
+    /* Lighter text for dark backgrounds */
+    font-size: var(--text-lg);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-8);
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-12);
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-6);
+}
+
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    background-color: #222;
+}
+
+.image {
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.card:hover .image {
+    transform: scale(1.05);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+}
+
+.name {
+    font-size: var(--text-2xl);
+    color: var(--color-primary-inverse);
+    margin-bottom: 0;
+}
+
+.credentials {
+    font-size: var(--text-sm);
+    color: var(--color-accent-warm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+}
+
+.philosophy {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: var(--text-lg);
+    color: #CCCCCC;
+    margin: var(--spacing-2) 0;
+}
+
+.link {
+    font-size: var(--text-sm);
+    color: var(--color-primary-inverse);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color var(--transition-fast);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-1);
+    margin-top: var(--spacing-2);
+}
+
+.link:hover {
+    color: var(--color-accent-warm);
+}

@@ -117,13 +117,90 @@ export default function MembershipPage() {
                 </div>
             </section>
 
+            {/* Comparison Table Section */}
+            <section className={styles.comparisonSection}>
+                <div className="container">
+                    <h2 className="text-center">Compare Tiers</h2>
+                    <p className="text-center" style={{ color: 'var(--color-muted-text)', marginBottom: 'var(--spacing-8)' }}>A clear view of included benefits across our three distinct memberships.</p>
+
+                    <div className={styles.tableWrapper}>
+                        <table className={styles.compareTable}>
+                            <thead>
+                                <tr>
+                                    <th>Benefit / Feature</th>
+                                    <th>Glow ($199/mo)</th>
+                                    <th>Foundation ($299/mo)</th>
+                                    <th>ADARE ($995/mo)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Banked Monthly Credit</td>
+                                    <td><span className={styles.checkIcon}>$199</span></td>
+                                    <td>—</td>
+                                    <td>—</td>
+                                </tr>
+                                <tr>
+                                    <td>Monthly HydraFacial Option</td>
+                                    <td><span className={styles.checkIcon}>✓</span></td>
+                                    <td>—</td>
+                                    <td><span className={styles.checkIcon}>✓</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Hormone Optimization Management</td>
+                                    <td>—</td>
+                                    <td><span className={styles.checkIcon}>✓</span></td>
+                                    <td><span className={styles.checkIcon}>✓</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Medical Weight Loss Management</td>
+                                    <td>—</td>
+                                    <td><span className={styles.checkIcon}>✓</span></td>
+                                    <td><span className={styles.checkIcon}>✓</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Comprehensive Labs Included</td>
+                                    <td>—</td>
+                                    <td><span className={styles.checkIcon}>✓</span> (Quarterly)</td>
+                                    <td><span className={styles.checkIcon}>✓</span> (Extensive)</td>
+                                </tr>
+                                <tr>
+                                    <td>Peptide Therapy Discount/Inclusion</td>
+                                    <td>—</td>
+                                    <td>15% Off</td>
+                                    <td><span className={styles.checkIcon}>Included</span></td>
+                                </tr>
+                                <tr>
+                                    <td>IV Therapy</td>
+                                    <td>10% Off</td>
+                                    <td>10% Off</td>
+                                    <td><span className={styles.checkIcon}>1x Monthly</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Aesthetic Injectables Discount</td>
+                                    <td>10% Off</td>
+                                    <td>10% Off</td>
+                                    <td>15% Off</td>
+                                </tr>
+                                <tr>
+                                    <td>Priority Booking Access</td>
+                                    <td><span className={styles.checkIcon}>✓</span></td>
+                                    <td><span className={styles.checkIcon}>✓</span></td>
+                                    <td><span className={styles.checkIcon}>Concierge</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section >
+
             {/* FAQ Section */}
-            <section className={styles.faqSection}>
+            < section className={styles.faqSection} >
                 <div className="container">
                     <h2 className="text-center" style={{ marginBottom: 'var(--spacing-12)' }}>Membership FAQs</h2>
                     <Accordion items={faqs} />
                 </div>
-            </section>
+            </section >
         </>
     );
 }

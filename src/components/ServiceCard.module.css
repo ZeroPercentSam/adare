@@ -25,6 +25,22 @@
     justify-content: flex-end;
 }
 
+.popularBadge {
+    position: absolute;
+    top: var(--spacing-6);
+    right: var(--spacing-6);
+    background-color: var(--color-accent);
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: var(--spacing-2) var(--spacing-4);
+    border-radius: var(--radius-full);
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
 .card:hover {
     transform: scale(1.02);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);

@@ -26,6 +26,24 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: none;
+}
+
+.heroStaticImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .heroVideo {
+        display: block;
+    }
+
+    .heroStaticImage {
+        display: none;
+    }
 }
 
 @keyframes slowZoom {
@@ -77,11 +95,24 @@
 
 .heroActions {
     display: flex;
+    flex-direction: column;
     gap: var(--spacing-4);
     margin-top: var(--spacing-8);
     opacity: 0;
     animation: fadeUp 0.8s var(--transition-slow) 0.2s forwards;
-    flex-wrap: wrap;
+    width: 100%;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .heroActions {
+        flex-direction: row;
+        justify-content: center;
+        max-width: none;
+        width: auto;
+    }
 }
 
 .heroButton {
@@ -98,6 +129,46 @@
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+.scrollIndicator {
+    position: absolute;
+    bottom: var(--spacing-8);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    color: var(--color-primary-inverse);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.8;
+}
+
+.scrollIcon {
+    margin-top: var(--spacing-2);
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
     }
 }
 
@@ -240,4 +311,38 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+}
+
+/* Services Ticker Marquee */
+.marqueeContainer {
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--color-background-alt);
+    border-top: 1px solid var(--color-divider);
+    border-bottom: 1px solid var(--color-divider);
+    padding: var(--spacing-4) 0;
+    margin-bottom: var(--spacing-16);
+    position: relative;
+    white-space: nowrap;
+}
+
+.marqueeText {
+    display: inline-block;
+    padding-left: 100%;
+    font-family: var(--font-sans);
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-muted-text);
+    animation: marquee 40s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-100%, 0);
+    }
 }

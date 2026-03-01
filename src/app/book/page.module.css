@@ -209,6 +209,41 @@
         border-left: none;
         border-right: none;
     }
+
+    .mobileCallFab {
+        display: block;
+        position: fixed;
+        bottom: var(--spacing-6);
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 100;
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .fabButton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--color-accent);
+        color: white;
+        text-decoration: none;
+        padding: var(--spacing-4);
+        border-radius: var(--radius-full);
+        font-weight: 600;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s;
+    }
+
+    .fabButton:active {
+        transform: scale(0.98);
+    }
+}
+
+@media (min-width: 769px) {
+    .mobileCallFab {
+        display: none;
+    }
 }
 
 /* Principles Section */

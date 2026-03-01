@@ -107,9 +107,9 @@ export default function ForMenPage() {
                 </div>
                 <div className={styles.heroContent}>
                     <div className="container">
-                        <span className={styles.heroLabel}>Demographics</span>
-                        <h1 className={styles.heroTitle}>For Men</h1>
-                        <p className={styles.heroTagline}>Protocols designed for peak male performance.</p>
+                        <span className={styles.heroLabel}>Male Optimization</span>
+                        <h1 className={styles.heroTitle} style={{ fontSize: 'clamp(40px, 5vw, 64px)' }}>Engineered for the Man Who Refuses to Decline</h1>
+                        <p className={styles.heroTagline}>Precision longevity medicine, hormone optimization, and aesthetic refinement for high performers.</p>
                     </div>
                 </div>
             </section>
@@ -163,12 +163,64 @@ export default function ForMenPage() {
                             </div>
                         ))}
                     </div>
+                </div>
+            </section>
 
-                    <div className="text-center" style={{ marginTop: 'var(--spacing-24)' }}>
-                        <Button href="/book?type=consultation" variant="primary">
-                            Request Male Optimization Consultation
-                        </Button>
+            {/* The ADARE Protocol for Men */}
+            <section className={styles.lightSection} style={{ backgroundColor: '#111', color: '#fff' }}>
+                <div className="container">
+                    <h2 className="text-center" style={{ marginBottom: 'var(--spacing-16)', color: 'var(--color-primary-inverse)' }}>The ADARE Protocol for Men</h2>
+                    <div className={styles.protocolJourney}>
+                        <div className={styles.journeyStep}>
+                            <div className={styles.stepNumber}>01</div>
+                            <h4>Comprehensive Assessment</h4>
+                            <p>Extensive biomarker testing, hormone panels, and physical evaluation to establish your baseline.</p>
+                        </div>
+                        <div className={styles.journeyStep}>
+                            <div className={styles.stepNumber}>02</div>
+                            <h4>Protocol Design</h4>
+                            <p>Our medical team builds a targeted regimen integrating TRT, peptides, and aesthetic treatments.</p>
+                        </div>
+                        <div className={styles.journeyStep}>
+                            <div className={styles.stepNumber}>03</div>
+                            <h4>Implementation</h4>
+                            <p>Begin your closely-monitored protocol at our Tampa Bay clinics or via concierge deployment.</p>
+                        </div>
+                        <div className={styles.journeyStep}>
+                            <div className={styles.stepNumber}>04</div>
+                            <h4>Ongoing Optimization</h4>
+                            <p>Continuous lab monitoring and protocol adjustments to ensure peak cognitive and physical states.</p>
+                        </div>
                     </div>
+                </div>
+            </section>
+
+            {/* Male Testimonials (Placeholder) */}
+            <section className={styles.lightSection} style={{ backgroundColor: '#fafafa' }}>
+                <div className="container text-center">
+                    <h2 style={{ marginBottom: 'var(--spacing-12)' }}>Patient Outcomes</h2>
+                    <div className={styles.threeColGrid}>
+                        <div className={styles.testimonialCard}>
+                            <p className={styles.quote}>"The combination of TRT and NAD+ completely changed my capacity to run my business. The brain fog is gone, and my physical energy is back to where it was in my 30s."</p>
+                            <p className={styles.author}>— Michael T., 48, CEO</p>
+                        </div>
+                        <div className={styles.testimonialCard}>
+                            <p className={styles.quote}>"I was dealing with chronic tendon issues that kept me out of the gym. Peptide therapy radically accelerated my healing time. ADARE's clinical approach is unmatched in Tampa."</p>
+                            <p className={styles.author}>— James R., 42, Former Athlete</p>
+                        </div>
+                        <div className={styles.testimonialCard}>
+                            <p className={styles.quote}>"The aesthetic work is incredibly subtle. No one asks if I've had work done—they just ask if I've been resting or working out more. Precisely what I wanted."</p>
+                            <p className={styles.author}>— David L., 55, Executive</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className={styles.ctaSection}>
+                <div className="container text-center">
+                    <Button href="/book?type=consultation" variant="primary">
+                        Request Male Optimization Consultation
+                    </Button>
                 </div>
             </section>
         </main>

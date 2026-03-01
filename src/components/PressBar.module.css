@@ -1,0 +1,49 @@
+.sectionPress {
+    padding: var(--spacing-10) 0;
+    background-color: #FAFAFA;
+    /* Very light gray for subtle contrast */
+    border-top: 1px solid var(--color-divider);
+}
+
+.heading {
+    text-align: center;
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-muted-text);
+    margin-bottom: var(--spacing-8);
+}
+
+.logoGrid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-6);
+}
+
+@media (min-width: 768px) {
+    .logoGrid {
+        gap: var(--spacing-16);
+    }
+}
+
+.logoWrapper {
+    opacity: 0.6;
+    transition: opacity var(--transition-fast);
+    filter: grayscale(100%);
+}
+
+.logoWrapper:hover {
+    opacity: 1;
+    filter: none;
+}
+
+.logoPlaceholder {
+    font-family: var(--font-serif);
+    font-size: var(--text-2xl);
+    font-weight: 600;
+    color: var(--color-primary);
+    white-space: nowrap;
+}

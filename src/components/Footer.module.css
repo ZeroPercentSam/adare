@@ -11,6 +11,74 @@
     padding: 0 var(--spacing-4);
 }
 
+.newsletterSection {
+    background-color: #fafafa;
+    border-radius: var(--radius-md);
+    padding: var(--spacing-8);
+    margin-bottom: var(--spacing-16);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-6);
+    border: 1px solid var(--color-divider);
+}
+
+@media (min-width: 768px) {
+    .newsletterSection {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: var(--spacing-10) var(--spacing-12);
+    }
+}
+
+.newsletterContent h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-2);
+}
+
+.newsletterContent p {
+    color: var(--color-muted-text);
+    font-size: 0.95rem;
+    max-width: 500px;
+}
+
+.newsletterForm {
+    display: flex;
+    width: 100%;
+    max-width: 400px;
+}
+
+.newsletterInput {
+    flex-grow: 1;
+    padding: var(--spacing-3) var(--spacing-4);
+    border: 1px solid var(--color-divider);
+    border-right: none;
+    border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+    font-size: 0.95rem;
+}
+
+.newsletterInput:focus {
+    outline: none;
+    border-color: var(--color-accent);
+}
+
+.newsletterButton {
+    background-color: var(--color-primary);
+    color: var(--color-primary-inverse);
+    border: 1px solid var(--color-primary);
+    padding: 0 var(--spacing-6);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.newsletterButton:hover {
+    background-color: var(--color-accent-warm);
+    border-color: var(--color-accent-warm);
+    color: var(--color-primary);
+}
+
 .topSection {
     display: flex;
     flex-direction: column;
@@ -32,16 +100,23 @@
     letter-spacing: 0.05em;
 }
 
+.brandTagline {
+    font-size: 0.9rem;
+    color: var(--color-muted-text);
+    margin-top: var(--spacing-2);
+    margin-bottom: var(--spacing-6);
+}
+
 .grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-8);
+    grid-template-columns: 1fr;
+    gap: var(--spacing-12);
     width: 100%;
 }
 
 @media (min-width: 768px) {
     .grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -72,7 +147,13 @@
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-2);
+    gap: var(--spacing-3);
+}
+
+.contactList li {
+    line-height: 1.5;
+    color: var(--color-muted-text);
+    font-size: 14px;
 }
 
 .column a {
@@ -85,13 +166,7 @@
     color: var(--color-primary);
 }
 
-.ctaSection {
-    display: flex;
-    justify-content: center;
-    padding-bottom: var(--spacing-16);
-    border-bottom: 1px solid var(--color-divider);
-    margin-bottom: var(--spacing-8);
-}
+
 
 .bookButton {
     display: inline-block;
